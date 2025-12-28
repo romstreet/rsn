@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>About Us | RomStreet - Your Trusted Financial Education Partner</title>
+    <meta name="title" content="About Us | RomStreet - Your Trusted Financial Education Partner">
+    <meta name="description" content="Learn about RomStreet's mission to provide accessible, practical financial education to help people achieve financial independence and make smarter money decisions.">
+    <meta name="keywords" content="about RomStreet, financial education, personal finance mission, financial literacy, money education, wealth building">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://romstreet.net/about">
+    <link rel="stylesheet" href="/styles.css">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://romstreet.net/about">
+    <meta property="og:title" content="About Us | RomStreet - Your Trusted Financial Education Partner">
+    <meta property="og:description" content="Learn about RomStreet's mission to provide accessible, practical financial education to help people achieve financial independence.">
+    <meta property="og:image" content="https://romstreet.net/img/about-us-financial-education.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="RomStreet">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://romstreet.net/about">
+    <meta property="twitter:title" content="About Us | RomStreet - Your Trusted Financial Education Partner">
+    <meta property="twitter:description" content="Learn about RomStreet's mission to provide accessible, practical financial education to help people achieve financial independence.">
+    <meta property="twitter:image" content="https://romstreet.net/img/about-us-financial-education.webp">
+    
+    <!-- Schema.org Organization Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "RomStreet",
+      "url": "https://romstreet.net",
+      "logo": "https://romstreet.net/img/romstreet-logo.png",
+      "description": "Your trusted guide to financial freedom. We provide practical advice to help you make smarter money decisions.",
+      "foundingDate": "2020",
+      "founders": [
+        {
+          "@type": "Person",
+          "name": "RomStreet"
+        }
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 Finance St",
+        "addressLocality": "Money City",
+        "addressRegion": "MC",
+        "postalCode": "12345",
+        "addressCountry": "US"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "(555) 123-4567",
+        "contactType": "customer service",
+        "email": "hello@RomStreet.com",
+        "availableLanguage": "English"
+      },
+      "sameAs": [
+        "https://twitter.com/RomStreet",
+        "https://facebook.com/RomStreet",
+        "https://instagram.com/RomStreet",
+        "https://linkedin.com/company/RomStreet",
+        "https://youtube.com/RomStreet"
+      ]
+    }
+    </script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://romstreet.net/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://romstreet.net/img/apple-touch-icon.png">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Slab:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* About-specific styles - 100% mobile safe */
+        .about-hero {
+            background: linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%);
+            color: white;
+            padding: 50px 0 40px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        
+        .about-title {
+            font-family: 'Roboto Slab', serif;
+            font-size: 36px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+        
+        .about-subtitle {
+            font-size: 20px;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+        
+        .mission-statement {
+            background: #e8f0fe;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 40px 0;
+            text-align: center;
+            border-left: 5px solid var(--accent);
+        }
+        
+        .mission-icon {
+            color: var(--accent);
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+        
+        .mission-text {
+            font-size: 22px;
+            font-style: italic;
+            color: var(--primary-dark);
+            margin-bottom: 15px;
+            font-family: 'Roboto Slab', serif;
+        }
+        
+        .team-section {
+            margin: 40px 0;
+        }
+        
+        .team-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        
+        .team-member {
+            flex: 1;
+            min-width: 250px;
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .team-member:hover {
+            transform: translateY(-5px);
+        }
+        
+        .member-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            overflow: hidden;
+            border: 4px solid #e8f0fe;
+        }
+        
+        .member-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .member-name {
+            font-family: 'Roboto Slab', serif;
+            font-size: 22px;
+            color: var(--primary-dark);
+            margin-bottom: 5px;
+        }
+        
+        .member-title {
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        .values-section {
+            margin: 50px 0;
+        }
+        
+        .values-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-top: 30px;
+        }
+        
+        .value-card {
+            flex: 1;
+            min-width: 250px;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+        
+        .value-icon {
+            width: 70px;
+            height: 70px;
+            background: #e8f0fe;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: var(--primary);
+            font-size: 30px;
+        }
+        
+        .value-title {
+            font-family: 'Roboto Slab', serif;
+            font-size: 20px;
+            color: var(--primary-dark);
+            margin-bottom: 15px;
+        }
+        
+        .stats-section {
+            background: linear-gradient(135deg, #34a853 0%, #2e7d32 100%);
+            color: white;
+            padding: 40px 0;
+            margin: 50px 0;
+            border-radius: 10px;
+        }
+        
+        .stats-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            text-align: center;
+            gap: 30px;
+        }
+        
+        .stat-item {
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .stat-number {
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+        
+        .timeline-section {
+            margin: 50px 0;
+        }
+        
+        .timeline-item {
+            display: flex;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .timeline-year {
+            width: 80px;
+            height: 80px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 20px;
+            flex-shrink: 0;
+            margin-right: 25px;
+        }
+        
+        .timeline-content {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            flex: 1;
+        }
+        
+        .timeline-title {
+            font-family: 'Roboto Slab', serif;
+            font-size: 20px;
+            color: var(--primary-dark);
+            margin-bottom: 10px;
+        }
+        
+        .contact-about {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 40px;
+            margin: 50px 0;
+            text-align: center;
+        }
+        
+        /* Mobile adjustments */
+        @media (max-width: 767px) {
+            .about-title {
+                font-size: 32px;
+            }
+            
+            .about-subtitle {
+                font-size: 18px;
+            }
+            
+            .timeline-item {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .timeline-year {
+                margin: 0 auto 20px;
+            }
+            
+            .team-grid,
+            .values-grid,
+            .stats-container {
+                flex-direction: column;
+            }
+            
+            .team-member,
+            .value-card,
+            .stat-item {
+                min-width: 100%;
+            }
+            
+            .contact-about {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="https://romstreet.net" class="logo">
+                    <i class="fas fa-chart-line"></i>
+                    RomStreet
+                </a>
+                <button class="mobile-toggle" id="mobileToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="https://romstreet.net">Home</a></li>
+                    <li><a href="https://romstreet.net/articles">Articles</a></li>
+                    <li><a href="https://romstreet.net/category/budgeting">Budgeting</a></li>
+                    <li><a href="https://romstreet.net/category/investing">Investing</a></li>
+                    <li><a href="https://romstreet.net/category/saving">Saving</a></li>
+                    <li><a href="https://romstreet.net/category/debt">Debt</a></li>
+                    <li><a href="https://romstreet.net/category/retirement">Retirement</a></li>
+                    <li><a href="https://romstreet.net/tools">Tools</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="about-hero">
+        <div class="container">
+            <h1 class="about-title">About RomStreet</h1>
+            <p class="about-subtitle">Your trusted partner in the journey toward financial freedom, independence, and wisdom.</p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <main class="article-content">
+            
+            <div class="mission-statement">
+                <div class="mission-icon">
+                    <i class="fas fa-bullseye"></i>
+                </div>
+                <p class="mission-text">"To democratize financial education and empower individuals to take control of their financial futures through practical, accessible guidance."</p>
+            </div>
+
+            <div class="article-body">
+                
+                </div>
+
+                <div class="values-section">
+                    <h2>Our Core Values</h2>
+                    <p>These principles guide everything we do at RomStreet, from the content we create to the way we interact with our community.</p>
+                    
+                    <div class="values-grid">
+                        <div class="value-card">
+                            <div class="value-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <h3 class="value-title">Education First</h3>
+                            <p>We believe knowledge is the foundation of financial success. Our content focuses on teaching principles, not pushing products.</p>
+                        </div>
+                        
+                        <div class="value-card">
+                            <div class="value-icon">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <h3 class="value-title">Trust & Transparency</h3>
+                            <p>We're completely transparent about how we make money and never let financial incentives influence our recommendations.</p>
+                        </div>
+                        
+                        <div class="value-card">
+                            <div class="value-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h3 class="value-title">Accessibility</h3>
+                            <p>Financial education should be available to everyone. We provide all our core content completely free of charge.</p>
+                        </div>
+                        
+                        <div class="value-card">
+                            <div class="value-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h3 class="value-title">Practicality</h3>
+                            <p>We focus on actionable advice that you can implement immediately, not just theoretical concepts.</p>
+                        </div>
+                    </div>
+                </div>
+
+                
+                
+
+                <h2>Our Educational Philosophy</h2>
+                <p>At RomStreet, we believe that effective financial education must be:</p>
+                
+                <ul>
+                    <li><strong>Practical:</strong> Focused on actionable steps you can take today</li>
+                    <li><strong>Progressive:</strong> Building from basic concepts to advanced strategies</li>
+                    <li><strong>Personalized:</strong> Recognizing that everyone's financial situation is unique</li>
+                    <li><strong>Positive:</strong> Framed as empowerment rather than restriction</li>
+                    <li><strong>Evidence-based:</strong> Rooted in proven financial principles and research</li>
+                </ul>
+
+                <div class="disclaimer-box">
+                    <h3>Our Independence Promise</h3>
+                    <p><strong>RomStreet is completely independent.</strong> We don't sell financial products, take commissions, or have affiliate relationships that could influence our recommendations. We're funded entirely by our premium courses (which represent less than 5% of our content), and we clearly distinguish between our free educational content and paid offerings.</p>
+                </div>
+
+                
+
+                <h2>Join Our Mission</h2>
+                <p>Financial literacy is a lifelong journey, and we're honored to be part of yours. Whether you're just starting to build your financial foundation or you're looking to optimize your existing wealth, we're here to provide the guidance, tools, and community you need to succeed.</p>
+                
+                <p>Thank you for trusting RomStreet as your financial education partner. Together, we're building a more financially literate world—one person, one family, one community at a time.</p>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>RomStreet</h3>
+                    <p>Your trusted guide to financial freedom. We provide practical advice to help you make smarter money decisions.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://romstreet.net">Home</a></li>
+                        <li><a href="https://romstreet.net/about">About Us</a></li>
+                        <li><a href="https://romstreet.net/privacy">Privacy Policy</a></li>
+                        <li><a href="https://romstreet.net/terms">Terms of Service</a></li>
+                        <li><a href="https://romstreet.net/contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Categories</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://romstreet.net/category/budgeting">Budgeting</a></li>
+                        <li><a href="https://romstreet.net/category/investing">Investing</a></li>
+                        <li><a href="https://romstreet.net/category/debt">Debt Management</a></li>
+                        <li><a href="https://romstreet.net/category/saving">Saving Money</a></li>
+                        <li><a href="https://romstreet.net/category/retirement">Retirement Planning</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://romstreet.net/articles">Articles</a></li>
+                        <li><a href="https://romstreet.net/tools">Free Tools</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>&copy; 2025 RomStreet. All rights reserved. Making financial education accessible to everyone.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navLinks = document.getElementById('navLinks');
+        
+        if(mobileToggle) {
+            mobileToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                const icon = mobileToggle.querySelector('i');
+                if (navLinks.classList.contains('active')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (event) => {
+            if (navLinks && mobileToggle && !navLinks.contains(event.target) && !mobileToggle.contains(event.target)) {
+                navLinks.classList.remove('active');
+                const icon = mobileToggle.querySelector('i');
+                if(icon) {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            }
+        });
+
+        // Image lazy loading enhancement
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('img[loading="lazy"]');
+            const imageObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.style.opacity = '1';
+                        img.style.transition = 'opacity 0.5s ease';
+                    }
+                });
+            });
+            images.forEach(img => {
+                img.style.opacity = '0.9';
+                imageObserver.observe(img);
+            });
+        });
+    </script>
+</body>
+</html>

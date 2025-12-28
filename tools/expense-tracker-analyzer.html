@@ -1,0 +1,1319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Expense Tracker & Analyzer | RomStreet - Free Spending Tracker 2025</title>
+    <meta name="title" content="Expense Tracker & Analyzer | RomStreet - Free Spending Tracker 2025">
+    <meta name="description" content="Track and analyze your spending with our free expense tracker. Categorize expenses, visualize spending patterns, and identify savings opportunities in 2025.">
+    <meta name="keywords" content="expense tracker, spending analyzer, money tracker, budget tracker, expense categories, spending analysis, financial tracking tool">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://romstreet.net/tools/expense-tracker-analyzer">
+    <link rel="stylesheet" href="/styles.css">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://romstreet.net/tools/expense-tracker-analyzer">
+    <meta property="og:title" content="Expense Tracker & Analyzer | RomStreet - Free Spending Tracker 2025">
+    <meta property="og:description" content="Track and analyze your spending with our free expense tracker. Categorize expenses, visualize spending patterns, and identify savings opportunities.">
+    <meta property="og:image" content="https://romstreet.net/img/expense-tracker-analyzer.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="RomStreet">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://romstreet.net/tools/expense-tracker-analyzer">
+    <meta property="twitter:title" content="Expense Tracker & Analyzer | RomStreet - Free Spending Tracker 2025">
+    <meta property="twitter:description" content="Track and analyze your spending with our free expense tracker. Categorize expenses, visualize spending patterns, and identify savings opportunities.">
+    <meta property="twitter:image" content="https://romstreet.net/img/expense-tracker-analyzer.webp">
+    
+    <!-- Schema.org WebApplication Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Expense Tracker & Analyzer",
+      "url": "https://romstreet.net/tools/expense-tracker-analyzer",
+      "description": "Free expense tracking and analysis tool that helps you categorize spending, visualize patterns, and identify savings opportunities.",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Any",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "RomStreet"
+      },
+      "featureList": [
+        "Expense categorization",
+        "Spending visualization",
+        "Trend analysis",
+        "Monthly comparisons",
+        "Savings recommendations",
+        "Exportable reports"
+      ],
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://romstreet.net/tools/expense-tracker-analyzer"
+      }
+    }
+    </script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://romstreet.net/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://romstreet.net/img/apple-touch-icon.png">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Slab:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Expense Tracker specific styles - 100% mobile safe */
+        .tracker-hero {
+            background: linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%);
+            color: white;
+            padding: 40px 0 30px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .tracker-title {
+            font-family: 'Roboto Slab', serif;
+            font-size: 32px;
+            line-height: 1.2;
+            margin-bottom: 15px;
+        }
+        
+        .tracker-subtitle {
+            font-size: 18px;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto 25px;
+        }
+        
+        .tracker-container {
+            max-width: 1200px;
+            margin: 0 auto 40px;
+        }
+        
+        .tracker-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+        
+        .tracker-header {
+            background: linear-gradient(135deg, #34a853 0%, #2e7d32 100%);
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+        
+        .tracker-header h2 {
+            font-family: 'Roboto Slab', serif;
+            font-size: 26px;
+            margin-bottom: 10px;
+        }
+        
+        .tracker-body {
+            padding: 30px;
+        }
+        
+        .tracker-sections {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        
+        .input-section {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .analysis-section {
+            flex: 2;
+            min-width: 300px;
+        }
+        
+        .section-title {
+            font-family: 'Roboto Slab', serif;
+            font-size: 22px;
+            color: var(--primary-dark);
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .section-title i {
+            color: var(--primary);
+        }
+        
+        .expense-form {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .form-col {
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .input-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--dark);
+            font-size: 15px;
+        }
+        
+        .text-input, .select-input, .date-input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid var(--light-gray);
+            border-radius: 8px;
+            font-size: 16px;
+            font-family: 'Poppins', sans-serif;
+            transition: var(--transition);
+        }
+        
+        .text-input:focus, .select-input:focus, .date-input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.2);
+        }
+        
+        .add-expense-btn {
+            background: var(--primary);
+            color: white;
+            padding: 14px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .add-expense-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+        
+        .expenses-list {
+            max-height: 400px;
+            overflow-y: auto;
+            margin-top: 20px;
+        }
+        
+        .expense-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            border-left: 4px solid;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .expense-details {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        
+        .expense-name {
+            font-weight: 600;
+            color: var(--dark);
+        }
+        
+        .expense-category {
+            font-size: 14px;
+            color: var(--gray);
+            background: #f0f0f0;
+            padding: 3px 10px;
+            border-radius: 12px;
+            display: inline-block;
+            width: fit-content;
+        }
+        
+        .expense-amount {
+            font-weight: 700;
+            font-size: 18px;
+            color: var(--primary-dark);
+        }
+        
+        .expense-date {
+            font-size: 14px;
+            color: var(--gray);
+        }
+        
+        .delete-expense {
+            color: #ea4335;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            padding: 5px;
+        }
+        
+        .summary-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .summary-card {
+            flex: 1;
+            min-width: 150px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+        
+        .summary-value {
+            font-size: 28px;
+            font-weight: 800;
+            margin-bottom: 5px;
+            display: block;
+        }
+        
+        .summary-label {
+            font-size: 14px;
+            color: var(--gray);
+        }
+        
+        .category-breakdown {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+        
+        .category-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .category-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        
+        .category-bar {
+            flex: 1;
+            height: 30px;
+            background: #e0e0e0;
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .category-fill {
+            height: 100%;
+            border-radius: 15px;
+            transition: width 1s ease;
+        }
+        
+        .category-info {
+            min-width: 150px;
+        }
+        
+        .category-name {
+            font-weight: 600;
+            color: var(--dark);
+        }
+        
+        .category-amount {
+            font-size: 14px;
+            color: var(--gray);
+        }
+        
+        .visualization-container {
+            margin: 40px 0;
+        }
+        
+        .chart-placeholder {
+            height: 300px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--gray);
+            margin: 20px 0;
+        }
+        
+        .chart-placeholder i {
+            font-size: 60px;
+            margin-bottom: 20px;
+            opacity: 0.5;
+        }
+        
+        .trend-analysis {
+            background: #fff8e6;
+            border-radius: 10px;
+            padding: 25px;
+            margin: 30px 0;
+            border-left: 4px solid #fbbc04;
+        }
+        
+        .insights-container {
+            margin: 40px 0;
+        }
+        
+        .insight-item {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            align-items: flex-start;
+        }
+        
+        .insight-icon {
+            width: 50px;
+            height: 50px;
+            background: #e8f0fe;
+            color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+        
+        .insight-content h4 {
+            font-family: 'Roboto Slab', serif;
+            font-size: 18px;
+            color: var(--primary-dark);
+            margin-bottom: 10px;
+        }
+        
+        .action-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 40px;
+        }
+        
+        .action-btn {
+            padding: 15px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: var(--transition);
+        }
+        
+        .action-btn.primary {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .action-btn.secondary {
+            background: #f8f9fa;
+            color: var(--dark);
+            border: 2px solid #e0e0e0;
+        }
+        
+        .action-btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        .export-section {
+            background: #e8f0fe;
+            border-radius: 10px;
+            padding: 25px;
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        /* Category colors */
+        .housing { border-left-color: #1a73e8; background-color: #e8f0fe; }
+        .housing .category-fill { background: #1a73e8; }
+        .housing .expense-category { background: #e8f0fe; color: #1a73e8; }
+        
+        .transportation { border-left-color: #34a853; background-color: #e8f5e9; }
+        .transportation .category-fill { background: #34a853; }
+        .transportation .expense-category { background: #e8f5e9; color: #34a853; }
+        
+        .food { border-left-color: #fbbc04; background-color: #fff8e6; }
+        .food .category-fill { background: #fbbc04; }
+        .food .expense-category { background: #fff8e6; color: #e6ac00; }
+        
+        .utilities { border-left-color: #ea4335; background-color: #fce8e6; }
+        .utilities .category-fill { background: #ea4335; }
+        .utilities .expense-category { background: #fce8e6; color: #ea4335; }
+        
+        .entertainment { border-left-color: #9c27b0; background-color: #f3e5f5; }
+        .entertainment .category-fill { background: #9c27b0; }
+        .entertainment .expense-category { background: #f3e5f5; color: #9c27b0; }
+        
+        .shopping { border-left-color: #ff9800; background-color: #fff3e0; }
+        .shopping .category-fill { background: #ff9800; }
+        .shopping .expense-category { background: #fff3e0; color: #ff9800; }
+        
+        .healthcare { border-left-color: #00bcd4; background-color: #e0f7fa; }
+        .healthcare .category-fill { background: #00bcd4; }
+        .healthcare .expense-category { background: #e0f7fa; color: #00bcd4; }
+        
+        .other { border-left-color: #795548; background-color: #efebe9; }
+        .other .category-fill { background: #795548; }
+        .other .expense-category { background: #efebe9; color: #795548; }
+        
+        /* Mobile adjustments */
+        @media (max-width: 767px) {
+            .tracker-title {
+                font-size: 28px;
+            }
+            
+            .tracker-body {
+                padding: 20px;
+            }
+            
+            .tracker-sections {
+                flex-direction: column;
+            }
+            
+            .input-section, .analysis-section {
+                min-width: 100%;
+            }
+            
+            .form-row {
+                flex-direction: column;
+            }
+            
+            .form-col {
+                min-width: 100%;
+            }
+            
+            .summary-cards {
+                flex-direction: column;
+            }
+            
+            .summary-card {
+                min-width: 100%;
+            }
+            
+            .category-info {
+                min-width: 100px;
+            }
+            
+            .expense-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+            
+            .action-buttons {
+                flex-direction: column;
+            }
+            
+            .action-btn {
+                justify-content: center;
+            }
+        }
+        
+        @media (min-width: 768px) and (max-width: 1024px) {
+            .tracker-sections {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="https://romstreet.net" class="logo">
+                    <i class="fas fa-chart-line"></i>
+                    RomStreet
+                </a>
+                <button class="mobile-toggle" id="mobileToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="https://romstreet.net">Home</a></li>
+                    <li><a href="https://romstreet.net/articles">Articles</a></li>
+                    <li><a href="https://romstreet.net/category/budgeting">Budgeting</a></li>
+                    <li><a href="https://romstreet.net/category/investing">Investing</a></li>
+                    <li><a href="https://romstreet.net/category/saving">Saving</a></li>
+                    <li><a href="https://romstreet.net/category/debt">Debt</a></li>
+                    <li><a href="https://romstreet.net/category/retirement">Retirement</a></li>
+                    <li><a href="https://romstreet.net/tools" class="active">Tools</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="tracker-hero">
+        <div class="container">
+            <h1 class="tracker-title">Expense Tracker & Analyzer</h1>
+            <p class="tracker-subtitle">Track, categorize, and analyze your spending to identify patterns and find opportunities to save more money in 2025.</p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="tracker-container">
+            <div class="tracker-card">
+                <div class="tracker-header">
+                    <h2>Track Your Expenses</h2>
+                    <p>Add your expenses below to start tracking and analyzing your spending patterns</p>
+                </div>
+                
+                <div class="tracker-body">
+                    <div class="tracker-sections">
+                        <!-- Input Section -->
+                        <div class="input-section">
+                            <h3 class="section-title">
+                                <i class="fas fa-plus-circle"></i>
+                                Add New Expense
+                            </h3>
+                            
+                            <div class="expense-form">
+                                <div class="form-row">
+                                    <div class="form-col">
+                                        <label class="input-label">Expense Name</label>
+                                        <input type="text" id="expenseName" class="text-input" placeholder="e.g., Grocery shopping" maxlength="50">
+                                    </div>
+                                    <div class="form-col">
+                                        <label class="input-label">Amount ($)</label>
+                                        <input type="number" id="expenseAmount" class="text-input" placeholder="0.00" min="0" step="0.01">
+                                    </div>
+                                </div>
+                                
+                                <div class="form-row">
+                                    <div class="form-col">
+                                        <label class="input-label">Category</label>
+                                        <select id="expenseCategory" class="select-input">
+                                            <option value="housing">Housing (Rent/Mortgage)</option>
+                                            <option value="transportation">Transportation</option>
+                                            <option value="food" selected>Food & Dining</option>
+                                            <option value="utilities">Utilities</option>
+                                            <option value="entertainment">Entertainment</option>
+                                            <option value="shopping">Shopping</option>
+                                            <option value="healthcare">Healthcare</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-col">
+                                        <label class="input-label">Date</label>
+                                        <input type="date" id="expenseDate" class="date-input" value="2025-12-28">
+                                    </div>
+                                </div>
+                                
+                                <button class="add-expense-btn" id="addExpenseBtn">
+                                    <i class="fas fa-plus"></i>
+                                    Add Expense
+                                </button>
+                            </div>
+                            
+                            <h3 class="section-title">
+                                <i class="fas fa-list"></i>
+                                Recent Expenses
+                            </h3>
+                            
+                            <div class="expenses-list" id="expensesList">
+                                <!-- Expenses will be added here dynamically -->
+                                <div class="expense-item food">
+                                    <div class="expense-details">
+                                        <div class="expense-name">Groceries</div>
+                                        <span class="expense-category">Food & Dining</span>
+                                        <div class="expense-date">Dec 28, 2025</div>
+                                    </div>
+                                    <div class="expense-amount">$85.50</div>
+                                    <button class="delete-expense" onclick="deleteExpense(this)">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                                
+                                <div class="expense-item transportation">
+                                    <div class="expense-details">
+                                        <div class="expense-name">Gas</div>
+                                        <span class="expense-category">Transportation</span>
+                                        <div class="expense-date">Dec 27, 2025</div>
+                                    </div>
+                                    <div class="expense-amount">$45.00</div>
+                                    <button class="delete-expense" onclick="deleteExpense(this)">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                                
+                                <div class="expense-item utilities">
+                                    <div class="expense-details">
+                                        <div class="expense-name">Electricity Bill</div>
+                                        <span class="expense-category">Utilities</span>
+                                        <div class="expense-date">Dec 25, 2025</div>
+                                    </div>
+                                    <div class="expense-amount">$120.75</div>
+                                    <button class="delete-expense" onclick="deleteExpense(this)">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Analysis Section -->
+                        <div class="analysis-section">
+                            <h3 class="section-title">
+                                <i class="fas fa-chart-bar"></i>
+                                Spending Analysis
+                            </h3>
+                            
+                            <div class="summary-cards">
+                                <div class="summary-card">
+                                    <span class="summary-value" id="totalExpenses">$251.25</span>
+                                    <span class="summary-label">Total Expenses</span>
+                                </div>
+                                <div class="summary-card">
+                                    <span class="summary-value" id="expenseCount">3</span>
+                                    <span class="summary-label">Transactions</span>
+                                </div>
+                                <div class="summary-card">
+                                    <span class="summary-value" id="averageExpense">$83.75</span>
+                                    <span class="summary-label">Average per Expense</span>
+                                </div>
+                                <div class="summary-card">
+                                    <span class="summary-value" id="largestCategory">Food</span>
+                                    <span class="summary-label">Largest Category</span>
+                                </div>
+                            </div>
+                            
+                            <div class="category-breakdown">
+                                <h4>Category Breakdown</h4>
+                                <div id="categoryBreakdown">
+                                    <!-- Categories will be added here dynamically -->
+                                    <div class="category-item">
+                                        <div class="category-info">
+                                            <div class="category-name">Food & Dining</div>
+                                            <div class="category-amount">$85.50 (34%)</div>
+                                        </div>
+                                        <div class="category-bar">
+                                            <div class="category-fill food" style="width: 34%;"></div>
+                                        </div>
+                                    </div>
+                                    <div class="category-item">
+                                        <div class="category-info">
+                                            <div class="category-name">Utilities</div>
+                                            <div class="category-amount">$120.75 (48%)</div>
+                                        </div>
+                                        <div class="category-bar">
+                                            <div class="category-fill utilities" style="width: 48%;"></div>
+                                        </div>
+                                    </div>
+                                    <div class="category-item">
+                                        <div class="category-info">
+                                            <div class="category-name">Transportation</div>
+                                            <div class="category-amount">$45.00 (18%)</div>
+                                        </div>
+                                        <div class="category-bar">
+                                            <div class="category-fill transportation" style="width: 18%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="visualization-container">
+                                <h4>Spending Visualization</h4>
+                                <div class="chart-placeholder">
+                                    <i class="fas fa-chart-pie"></i>
+                                    <p>Add more expenses to generate interactive charts</p>
+                                    <p>Tracking at least 5 expenses unlocks advanced visualizations</p>
+                                </div>
+                            </div>
+                            
+                            <div class="trend-analysis">
+                                <h4><i class="fas fa-lightbulb"></i> Quick Insights</h4>
+                                <p id="insightText">Based on your current expenses, food is your largest spending category. Consider meal planning to reduce grocery costs.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="insights-container">
+                        <h3 class="section-title">
+                            <i class="fas fa-bullseye"></i>
+                            Personalized Insights & Recommendations
+                        </h3>
+                        
+                        <div class="insight-item">
+                            <div class="insight-icon">
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                            <div class="insight-content">
+                                <h4>Food Spending Analysis</h4>
+                                <p>Your food expenses are above the national average. Consider meal planning, buying in bulk, and reducing dining out to save $50-100 monthly.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="insight-item">
+                            <div class="insight-icon">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <div class="insight-content">
+                                <h4>Utilities Optimization</h4>
+                                <p>Your utility bills are moderate. Simple changes like using LED bulbs, adjusting thermostat settings, and unplugging unused devices could save 10-15%.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="insight-item">
+                            <div class="insight-icon">
+                                <i class="fas fa-gas-pump"></i>
+                            </div>
+                            <div class="insight-content">
+                                <h4>Transportation Efficiency</h4>
+                                <p>Consider carpooling, using public transportation, or combining trips to reduce fuel costs. Proper tire inflation alone can improve mileage by 3%.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="export-section">
+                        <h4><i class="fas fa-download"></i> Export Your Data</h4>
+                        <p>Download your expense data as a CSV file for further analysis or to import into spreadsheet software.</p>
+                        <button class="action-btn primary" id="exportDataBtn">
+                            <i class="fas fa-file-export"></i>
+                            Export Expense Data
+                        </button>
+                    </div>
+                    
+                    <div class="action-buttons">
+                        <a href="https://romstreet.net/tools/budget-calculator" class="action-btn primary">
+                            <i class="fas fa-calculator"></i>
+                            Try Budget Calculator
+                        </a>
+                        <!-- <a href="https://romstreet.net/articles/expense-tracking-guide" class="action-btn secondary">
+                            <i class="fas fa-book"></i>
+                            Read Tracking Guide
+                        </a> -->
+                        <button class="action-btn secondary" onclick="clearAllExpenses()">
+                            <i class="fas fa-redo"></i>
+                            Clear All Expenses
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>RomStreet</h3>
+                    <p>Your trusted guide to financial freedom. We provide practical advice to help you make smarter money decisions.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://romstreet.net">Home</a></li>
+                        <li><a href="https://romstreet.net/about">About Us</a></li>
+                        <li><a href="https://romstreet.net/privacy">Privacy Policy</a></li>
+                        <li><a href="https://romstreet.net/terms">Terms of Service</a></li>
+                        <li><a href="https://romstreet.net/contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Categories</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://romstreet.net/category/budgeting">Budgeting</a></li>
+                        <li><a href="https://romstreet.net/category/investing">Investing</a></li>
+                        <li><a href="https://romstreet.net/category/debt">Debt Management</a></li>
+                        <li><a href="https://romstreet.net/category/saving">Saving Money</a></li>
+                        <li><a href="https://romstreet.net/category/retirement">Retirement Planning</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://romstreet.net/articles">Articles</a></li>
+                        <li><a href="https://romstreet.net/tools">Free Tools</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>&copy; 2025 RomStreet. All rights reserved. Your expense data is stored locally in your browser and is never sent to our servers.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navLinks = document.getElementById('navLinks');
+        
+        if(mobileToggle) {
+            mobileToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                const icon = mobileToggle.querySelector('i');
+                if (navLinks.classList.contains('active')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (event) => {
+            if (navLinks && mobileToggle && !navLinks.contains(event.target) && !mobileToggle.contains(event.target)) {
+                navLinks.classList.remove('active');
+                const icon = mobileToggle.querySelector('i');
+                if(icon) {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            }
+        });
+
+        // Expense Tracker Logic
+        let expenses = JSON.parse(localStorage.getItem('RomStreetExpenses')) || [
+            { id: 1, name: 'Groceries', amount: 85.50, category: 'food', date: '2025-12-28' },
+            { id: 2, name: 'Gas', amount: 45.00, category: 'transportation', date: '2025-12-27' },
+            { id: 3, name: 'Electricity Bill', amount: 120.75, category: 'utilities', date: '2025-12-25' }
+        ];
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            updateExpenseDisplay();
+            updateAnalysis();
+        });
+
+        // Add expense
+        document.getElementById('addExpenseBtn').addEventListener('click', function() {
+            const name = document.getElementById('expenseName').value.trim();
+            const amount = parseFloat(document.getElementById('expenseAmount').value);
+            const category = document.getElementById('expenseCategory').value;
+            const date = document.getElementById('expenseDate').value;
+            
+            // Validation
+            if (!name) {
+                alert('Please enter an expense name');
+                return;
+            }
+            
+            if (!amount || amount <= 0) {
+                alert('Please enter a valid amount');
+                return;
+            }
+            
+            if (!date) {
+                alert('Please select a date');
+                return;
+            }
+            
+            // Create new expense
+            const newExpense = {
+                id: Date.now(), // Simple unique ID
+                name: name,
+                amount: amount,
+                category: category,
+                date: date
+            };
+            
+            expenses.push(newExpense);
+            saveExpenses();
+            updateExpenseDisplay();
+            updateAnalysis();
+            
+            // Clear form
+            document.getElementById('expenseName').value = '';
+            document.getElementById('expenseAmount').value = '';
+            document.getElementById('expenseCategory').value = 'food';
+            document.getElementById('expenseDate').value = '2025-12-28';
+            
+            // Show success message
+            showNotification('Expense added successfully!');
+        });
+
+        // Delete expense
+        function deleteExpense(button) {
+            const expenseItem = button.closest('.expense-item');
+            const expenseId = parseInt(expenseItem.dataset.id);
+            
+            expenses = expenses.filter(expense => expense.id !== expenseId);
+            saveExpenses();
+            updateExpenseDisplay();
+            updateAnalysis();
+            
+            showNotification('Expense deleted');
+        }
+
+        // Clear all expenses
+        function clearAllExpenses() {
+            if (confirm('Are you sure you want to clear all expenses? This cannot be undone.')) {
+                expenses = [];
+                saveExpenses();
+                updateExpenseDisplay();
+                updateAnalysis();
+                showNotification('All expenses cleared');
+            }
+        }
+
+        // Update expense display
+        function updateExpenseDisplay() {
+            const expensesList = document.getElementById('expensesList');
+            expensesList.innerHTML = '';
+            
+            // Sort by date (newest first)
+            const sortedExpenses = [...expenses].sort((a, b) => new Date(b.date) - new Date(a.date));
+            
+            if (sortedExpenses.length === 0) {
+                expensesList.innerHTML = '<div style="text-align: center; padding: 40px; color: var(--gray);"><i class="fas fa-receipt fa-3x" style="margin-bottom: 15px;"></i><p>No expenses added yet. Add your first expense above!</p></div>';
+                return;
+            }
+            
+            sortedExpenses.forEach(expense => {
+                const categoryNames = {
+                    housing: 'Housing',
+                    transportation: 'Transportation',
+                    food: 'Food & Dining',
+                    utilities: 'Utilities',
+                    entertainment: 'Entertainment',
+                    shopping: 'Shopping',
+                    healthcare: 'Healthcare',
+                    other: 'Other'
+                };
+                
+                const categoryClass = expense.category;
+                const formattedDate = formatDate(expense.date);
+                const formattedAmount = formatCurrency(expense.amount);
+                
+                const expenseElement = document.createElement('div');
+                expenseElement.className = `expense-item ${categoryClass}`;
+                expenseElement.dataset.id = expense.id;
+                expenseElement.innerHTML = `
+                    <div class="expense-details">
+                        <div class="expense-name">${expense.name}</div>
+                        <span class="expense-category">${categoryNames[expense.category]}</span>
+                        <div class="expense-date">${formattedDate}</div>
+                    </div>
+                    <div class="expense-amount">${formattedAmount}</div>
+                    <button class="delete-expense" onclick="deleteExpense(this)">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                `;
+                
+                expensesList.appendChild(expenseElement);
+            });
+        }
+
+        // Update analysis
+        function updateAnalysis() {
+            // Calculate totals
+            const totalExpenses = expenses.reduce((sum, expense) => sum + expense.amount, 0);
+            const expenseCount = expenses.length;
+            const averageExpense = expenseCount > 0 ? totalExpenses / expenseCount : 0;
+            
+            // Calculate category totals
+            const categories = {
+                housing: 0,
+                transportation: 0,
+                food: 0,
+                utilities: 0,
+                entertainment: 0,
+                shopping: 0,
+                healthcare: 0,
+                other: 0
+            };
+            
+            expenses.forEach(expense => {
+                categories[expense.category] += expense.amount;
+            });
+            
+            // Find largest category
+            let largestCategory = 'None';
+            let largestAmount = 0;
+            
+            Object.entries(categories).forEach(([category, amount]) => {
+                if (amount > largestAmount) {
+                    largestAmount = amount;
+                    largestCategory = category;
+                }
+            });
+            
+            // Update summary cards
+            document.getElementById('totalExpenses').textContent = formatCurrency(totalExpenses);
+            document.getElementById('expenseCount').textContent = expenseCount;
+            document.getElementById('averageExpense').textContent = formatCurrency(averageExpense);
+            document.getElementById('largestCategory').textContent = formatCategoryName(largestCategory);
+            
+            // Update category breakdown
+            updateCategoryBreakdown(categories, totalExpenses);
+            
+            // Update insights
+            updateInsights(categories, totalExpenses, expenseCount);
+        }
+
+        // Update category breakdown
+        function updateCategoryBreakdown(categories, totalExpenses) {
+            const breakdownContainer = document.getElementById('categoryBreakdown');
+            breakdownContainer.innerHTML = '';
+            
+            const categoryNames = {
+                housing: 'Housing',
+                transportation: 'Transportation',
+                food: 'Food & Dining',
+                utilities: 'Utilities',
+                entertainment: 'Entertainment',
+                shopping: 'Shopping',
+                healthcare: 'Healthcare',
+                other: 'Other'
+            };
+            
+            // Sort categories by amount (largest first)
+            const sortedCategories = Object.entries(categories)
+                .filter(([_, amount]) => amount > 0)
+                .sort((a, b) => b[1] - a[1]);
+            
+            if (sortedCategories.length === 0) {
+                breakdownContainer.innerHTML = '<div style="text-align: center; padding: 20px; color: var(--gray);"><i class="fas fa-chart-pie"></i><p>Add expenses to see category breakdown</p></div>';
+                return;
+            }
+            
+            sortedCategories.forEach(([category, amount]) => {
+                const percentage = totalExpenses > 0 ? (amount / totalExpenses * 100).toFixed(0) : 0;
+                
+                const categoryElement = document.createElement('div');
+                categoryElement.className = 'category-item';
+                categoryElement.innerHTML = `
+                    <div class="category-info">
+                        <div class="category-name">${categoryNames[category]}</div>
+                        <div class="category-amount">${formatCurrency(amount)} (${percentage}%)</div>
+                    </div>
+                    <div class="category-bar">
+                        <div class="category-fill ${category}" style="width: ${percentage}%;"></div>
+                    </div>
+                `;
+                
+                breakdownContainer.appendChild(categoryElement);
+            });
+        }
+
+        // Update insights
+        function updateInsights(categories, totalExpenses, expenseCount) {
+            const insightText = document.getElementById('insightText');
+            
+            if (expenseCount === 0) {
+                insightText.textContent = 'Add your first expense to get personalized insights and recommendations.';
+                return;
+            }
+            
+            if (expenseCount < 3) {
+                insightText.textContent = 'Add a few more expenses to get detailed spending insights and personalized recommendations.';
+                return;
+            }
+            
+            // Generate insight based on spending patterns
+            let insights = [];
+            
+            if (categories.food / totalExpenses > 0.3) {
+                insights.push('Food expenses are high. Consider meal planning to reduce costs.');
+            }
+            
+            if (categories.utilities > 150) {
+                insights.push('Utility bills could be optimized with energy-saving measures.');
+            }
+            
+            if (categories.entertainment > 100 && expenseCount > 5) {
+                insights.push('Entertainment spending is noticeable. Look for free alternatives.');
+            }
+            
+            if (categories.shopping / totalExpenses > 0.25) {
+                insights.push('Shopping is a significant expense. Implement a 24-hour rule for non-essential purchases.');
+            }
+            
+            // Default insight if none apply
+            if (insights.length === 0) {
+                insights.push('Your spending appears balanced. Continue tracking to identify optimization opportunities.');
+            }
+            
+            insightText.textContent = insights[0];
+        }
+
+        // Export data
+        document.getElementById('exportDataBtn').addEventListener('click', function() {
+            if (expenses.length === 0) {
+                alert('No expenses to export. Add some expenses first.');
+                return;
+            }
+            
+            // Create CSV content
+            let csvContent = 'Date,Name,Category,Amount\n';
+            
+            expenses.forEach(expense => {
+                const categoryNames = {
+                    housing: 'Housing',
+                    transportation: 'Transportation',
+                    food: 'Food & Dining',
+                    utilities: 'Utilities',
+                    entertainment: 'Entertainment',
+                    shopping: 'Shopping',
+                    healthcare: 'Healthcare',
+                    other: 'Other'
+                };
+                
+                csvContent += `${expense.date},"${expense.name.replace(/"/g, '""')}",${categoryNames[expense.category]},${expense.amount}\n`;
+            });
+            
+            // Create download link
+            const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.setAttribute('href', url);
+            link.setAttribute('download', `RomStreet-expenses-${new Date().toISOString().slice(0,10)}.csv`);
+            link.style.visibility = 'hidden';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            
+            showNotification('Expense data exported successfully!');
+        });
+
+        // Helper functions
+        function saveExpenses() {
+            localStorage.setItem('RomStreetExpenses', JSON.stringify(expenses));
+        }
+
+        function formatCurrency(amount) {
+            return '$' + amount.toLocaleString('en-US', {
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 2
+            });
+        }
+
+        function formatDate(dateString) {
+            const date = new Date(dateString);
+            return date.toLocaleDateString('en-US', { 
+                month: 'short', 
+                day: 'numeric', 
+                year: 'numeric' 
+            });
+        }
+
+        function formatCategoryName(category) {
+            const names = {
+                housing: 'Housing',
+                transportation: 'Transportation',
+                food: 'Food',
+                utilities: 'Utilities',
+                entertainment: 'Entertainment',
+                shopping: 'Shopping',
+                healthcare: 'Healthcare',
+                other: 'Other'
+            };
+            return names[category] || 'Other';
+        }
+
+        function showNotification(message) {
+            // Create notification element
+            const notification = document.createElement('div');
+            notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: var(--primary);
+                color: white;
+                padding: 15px 25px;
+                border-radius: 8px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+                z-index: 1000;
+                animation: slideIn 0.3s ease;
+            `;
+            
+            // Add keyframes for animation
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes slideIn {
+                    from { transform: translateX(100%); opacity: 0; }
+                    to { transform: translateX(0); opacity: 1; }
+                }
+            `;
+            document.head.appendChild(style);
+            
+            notification.textContent = message;
+            document.body.appendChild(notification);
+            
+            // Remove after 3 seconds
+            setTimeout(() => {
+                notification.style.animation = 'slideIn 0.3s ease reverse';
+                setTimeout(() => {
+                    document.body.removeChild(notification);
+                    document.head.removeChild(style);
+                }, 300);
+            }, 3000);
+        }
+
+        // Allow Enter key to add expense
+        document.getElementById('expenseName').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                document.getElementById('addExpenseBtn').click();
+            }
+        });
+        
+        document.getElementById('expenseAmount').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                document.getElementById('addExpenseBtn').click();
+            }
+        });
+    </script>
+</body>
+</html>

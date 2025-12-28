@@ -1,0 +1,1334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Financial Health Calculator | RomStreet - Free Financial Assessment Tool</title>
+    <meta name="title" content="Financial Health Calculator | RomStreet - Free Financial Assessment Tool">
+    <meta name="description" content="Take our comprehensive 2025 financial health assessment. Get your personalized financial health score and actionable recommendations to improve your financial wellbeing.">
+    <meta name="keywords" content="financial health calculator, financial wellness assessment, money health check, financial fitness score, personal finance assessment, financial health score">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://romstreet.net/tools/financial-health-calculator">
+    <link rel="stylesheet" href="/styles.css">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://romstreet.net/tools/financial-health-calculator">
+    <meta property="og:title" content="Financial Health Calculator | RomStreet - Free Financial Assessment Tool">
+    <meta property="og:description" content="Take our comprehensive 2025 financial health assessment. Get your personalized financial health score and actionable recommendations.">
+    <meta property="og:image" content="https://romstreet.net/img/financial-health-calculator.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="RomStreet">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://romstreet.net/tools/financial-health-calculator">
+    <meta property="twitter:title" content="Financial Health Calculator | RomStreet - Free Financial Assessment Tool">
+    <meta property="twitter:description" content="Take our comprehensive 2025 financial health assessment. Get your personalized financial health score and actionable recommendations.">
+    <meta property="twitter:image" content="https://romstreet.net/img/financial-health-calculator.webp">
+    
+    <!-- Schema.org WebApplication Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Financial Health Calculator",
+      "url": "https://romstreet.net/tools/financial-health-calculator",
+      "description": "Comprehensive financial health assessment tool that calculates your financial wellness score and provides personalized recommendations.",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Any",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "RomStreet"
+      },
+      "featureList": [
+        "Budgeting assessment",
+        "Emergency fund evaluation",
+        "Debt analysis",
+        "Retirement planning check",
+        "Insurance coverage review",
+        "Investment health scoring"
+      ],
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://romstreet.net/tools/financial-health-calculator"
+      }
+    }
+    </script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://romstreet.net/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://romstreet.net/img/apple-touch-icon.png">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Slab:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Financial Health Calculator specific styles - 100% mobile safe */
+        .calculator-hero {
+            background: linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%);
+            color: white;
+            padding: 40px 0 30px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .calculator-title {
+            font-family: 'Roboto Slab', serif;
+            font-size: 32px;
+            line-height: 1.2;
+            margin-bottom: 15px;
+        }
+        
+        .calculator-subtitle {
+            font-size: 18px;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto 25px;
+        }
+        
+        .assessment-steps {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin: 30px 0;
+        }
+        
+        .step-indicator {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        
+        .step-indicator.active {
+            background: white;
+            color: var(--primary);
+        }
+        
+        .calculator-container {
+            max-width: 900px;
+            margin: 0 auto 40px;
+        }
+        
+        .calculator-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+        
+        .calculator-header {
+            background: linear-gradient(135deg, #34a853 0%, #2e7d32 100%);
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+        
+        .calculator-header h2 {
+            font-family: 'Roboto Slab', serif;
+            font-size: 26px;
+            margin-bottom: 10px;
+        }
+        
+        .calculator-body {
+            padding: 30px;
+        }
+        
+        .assessment-section {
+            margin-bottom: 40px;
+            padding-bottom: 40px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        
+        .assessment-section:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        
+        .section-title {
+            font-family: 'Roboto Slab', serif;
+            font-size: 22px;
+            color: var(--primary-dark);
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .section-title i {
+            color: var(--primary);
+        }
+        
+        .input-group {
+            margin-bottom: 25px;
+        }
+        
+        .input-label {
+            display: block;
+            margin-bottom: 12px;
+            font-weight: 600;
+            color: var(--dark);
+            font-size: 16px;
+        }
+        
+        .input-help {
+            display: block;
+            margin-top: 8px;
+            color: var(--gray);
+            font-size: 14px;
+            font-style: italic;
+        }
+        
+        .range-input {
+            width: 100%;
+            height: 10px;
+            -webkit-appearance: none;
+            appearance: none;
+            background: #e0e0e0;
+            border-radius: 5px;
+            outline: none;
+            margin: 15px 0;
+        }
+        
+        .range-input::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 24px;
+            height: 24px;
+            background: var(--primary);
+            border-radius: 50%;
+            cursor: pointer;
+            border: 3px solid white;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        }
+        
+        .range-labels {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            color: var(--gray);
+            font-size: 14px;
+        }
+        
+        .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            padding: 12px 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            flex: 1;
+            min-width: 200px;
+            transition: var(--transition);
+        }
+        
+        .checkbox-label:hover {
+            background: #e8f0fe;
+        }
+        
+        .checkbox-label input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            accent-color: var(--primary);
+        }
+        
+        .radio-group {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .radio-label {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .radio-label:hover {
+            background: #e8f0fe;
+        }
+        
+        .radio-label input[type="radio"] {
+            width: 20px;
+            height: 20px;
+            accent-color: var(--primary);
+        }
+        
+        .calculate-button {
+            background: linear-gradient(135deg, #fbbc04 0%, #e6ac00 100%);
+            color: var(--dark);
+            padding: 18px 45px;
+            border: none;
+            border-radius: 10px;
+            font-size: 20px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin: 40px auto;
+            display: block;
+        }
+        
+        .calculate-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(251, 188, 4, 0.3);
+        }
+        
+        .results-container {
+            display: none;
+            background: white;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            padding: 40px;
+            margin-top: 40px;
+        }
+        
+        .score-display {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .score-circle {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin: 0 auto 25px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            position: relative;
+        }
+        
+        .score-value {
+            font-size: 48px;
+            line-height: 1;
+        }
+        
+        .score-label {
+            font-size: 20px;
+            opacity: 0.9;
+        }
+        
+        .score-excellent {
+            background: conic-gradient(#34a853 0% 80%, #e8f0fe 80% 100%);
+            color: #2e7d32;
+        }
+        
+        .score-good {
+            background: conic-gradient(#34a853 0% 65%, #fbbc04 65% 80%, #e8f0fe 80% 100%);
+            color: #34a853;
+        }
+        
+        .score-fair {
+            background: conic-gradient(#fbbc04 0% 50%, #ea4335 50% 80%, #e8f0fe 80% 100%);
+            color: #e6ac00;
+        }
+        
+        .score-poor {
+            background: conic-gradient(#ea4335 0% 40%, #e8f0fe 40% 100%);
+            color: #ea4335;
+        }
+        
+        .category-scores {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 40px 0;
+        }
+        
+        .category-score {
+            flex: 1;
+            min-width: 150px;
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .category-name {
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        
+        .category-value {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 5px;
+        }
+        
+        .recommendations {
+            margin: 40px 0;
+        }
+        
+        .recommendation-item {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 25px;
+            padding: 25px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            align-items: flex-start;
+        }
+        
+        .rec-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+        
+        .rec-content h4 {
+            font-family: 'Roboto Slab', serif;
+            font-size: 18px;
+            color: var(--primary-dark);
+            margin-bottom: 10px;
+        }
+        
+        .action-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 40px;
+        }
+        
+        .action-btn {
+            padding: 15px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: var(--transition);
+        }
+        
+        .action-btn.primary {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .action-btn.secondary {
+            background: #f8f9fa;
+            color: var(--dark);
+            border: 2px solid #e0e0e0;
+        }
+        
+        .action-btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        .comparison-chart {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 40px 0;
+        }
+        
+        .chart-bar {
+            height: 40px;
+            background: #e0e0e0;
+            border-radius: 20px;
+            margin: 20px 0;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .chart-fill {
+            height: 100%;
+            border-radius: 20px;
+            transition: width 1s ease;
+            display: flex;
+            align-items: center;
+            padding-left: 20px;
+            color: white;
+            font-weight: 600;
+            min-width: 60px;
+        }
+        
+        .chart-label {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        /* Mobile adjustments */
+        @media (max-width: 767px) {
+            .calculator-title {
+                font-size: 28px;
+            }
+            
+            .calculator-body {
+                padding: 20px;
+            }
+            
+            .section-title {
+                font-size: 20px;
+            }
+            
+            .checkbox-label {
+                min-width: 100%;
+            }
+            
+            .score-circle {
+                width: 150px;
+                height: 150px;
+            }
+            
+            .score-value {
+                font-size: 36px;
+            }
+            
+            .category-scores {
+                flex-direction: column;
+            }
+            
+            .recommendation-item {
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+            }
+            
+            .action-buttons {
+                flex-direction: column;
+            }
+            
+            .action-btn {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="https://romstreet.net" class="logo">
+                    <i class="fas fa-chart-line"></i>
+                    RomStreet
+                </a>
+                <button class="mobile-toggle" id="mobileToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="https://romstreet.net">Home</a></li>
+                    <li><a href="https://romstreet.net/articles">Articles</a></li>
+                    <li><a href="https://romstreet.net/category/budgeting">Budgeting</a></li>
+                    <li><a href="https://romstreet.net/category/investing">Investing</a></li>
+                    <li><a href="https://romstreet.net/category/saving">Saving</a></li>
+                    <li><a href="https://romstreet.net/category/debt">Debt</a></li>
+                    <li><a href="https://romstreet.net/category/retirement">Retirement</a></li>
+                    <li><a href="https://romstreet.net/tools" class="active">Tools</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="calculator-hero">
+        <div class="container">
+            <h1 class="calculator-title">Financial Health Calculator</h1>
+            <p class="calculator-subtitle">Take our comprehensive 5-minute assessment to get your personalized financial health score and actionable recommendations for improvement.</p>
+            
+            <div class="assessment-steps">
+                <div class="step-indicator active">1</div>
+                <div class="step-indicator">2</div>
+                <div class="step-indicator">3</div>
+                <div class="step-indicator">4</div>
+                <div class="step-indicator">5</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="calculator-container">
+            <div class="calculator-card">
+                <div class="calculator-header">
+                    <h2>2025 Financial Health Assessment</h2>
+                    <p>Answer honestly for the most accurate results. Your data is never saved or shared.</p>
+                </div>
+                
+                <div class="calculator-body">
+                    <form id="financialHealthForm">
+                        <!-- Budgeting & Spending Section -->
+                        <div class="assessment-section">
+                            <h3 class="section-title">
+                                <i class="fas fa-wallet"></i>
+                                1. Budgeting & Spending Habits
+                            </h3>
+                            
+                            <div class="input-group">
+                                <label class="input-label">What percentage of your monthly income do you typically spend?</label>
+                                <input type="range" min="0" max="100" value="60" class="range-input" id="spendingRate">
+                                <div class="range-labels">
+                                    <span>0%</span>
+                                    <span>50%</span>
+                                    <span>100%</span>
+                                </div>
+                                <span class="input-help">Ideal: Spending less than 80% of your income</span>
+                                <div class="range-value" id="spendingValue">60%</div>
+                            </div>
+                            
+                            <div class="input-group">
+                                <label class="input-label">How closely do you track your expenses?</label>
+                                <div class="radio-group">
+                                    <label class="radio-label">
+                                        <input type="radio" name="expenseTracking" value="4" required>
+                                        <span>Track every expense in detail (daily)</span>
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="expenseTracking" value="3" required checked>
+                                        <span>Track most expenses (weekly)</span>
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="expenseTracking" value="2" required>
+                                        <span>Track major expenses only (monthly)</span>
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="expenseTracking" value="1" required>
+                                        <span>Rarely track expenses</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Emergency Fund & Debt Section -->
+                        <div class="assessment-section">
+                            <h3 class="section-title">
+                                <i class="fas fa-shield-alt"></i>
+                                2. Emergency Fund & Debt Management
+                            </h3>
+                            
+                            <div class="input-group">
+                                <label class="input-label">How many months of living expenses do you have saved in your emergency fund?</label>
+                                <input type="range" min="0" max="12" value="3" class="range-input" id="emergencyFund">
+                                <div class="range-labels">
+                                    <span>0 months</span>
+                                    <span>6 months</span>
+                                    <span>12+ months</span>
+                                </div>
+                                <span class="input-help">Recommended: 3-6 months of expenses</span>
+                                <div class="range-value" id="emergencyValue">3 months</div>
+                            </div>
+                            
+                            <div class="input-group">
+                                <label class="input-label">What is your total debt-to-income ratio?</label>
+                                <div class="radio-group">
+                                    <label class="radio-label">
+                                        <input type="radio" name="debtRatio" value="4" required>
+                                        <span>Less than 20% (Excellent)</span>
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="debtRatio" value="3" required checked>
+                                        <span>20-35% (Good)</span>
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="debtRatio" value="2" required>
+                                        <span>36-50% (Fair)</span>
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="debtRatio" value="1" required>
+                                        <span>More than 50% (Needs Improvement)</span>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="input-group">
+                                <label class="input-label">Which types of debt do you currently have? (Select all that apply)</label>
+                                <div class="checkbox-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="debtTypes" value="mortgage">
+                                        <span>Mortgage</span>
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="debtTypes" value="auto">
+                                        <span>Auto Loan</span>
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="debtTypes" value="student">
+                                        <span>Student Loan</span>
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="debtTypes" value="credit">
+                                        <span>Credit Card Debt</span>
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="debtTypes" value="personal">
+                                        <span>Personal Loan</span>
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="debtTypes" value="medical">
+                                        <span>Medical Debt</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Savings & Investments Section -->
+                        <div class="assessment-section">
+                            <h3 class="section-title">
+                                <i class="fas fa-chart-line"></i>
+                                3. Savings & Investment Health
+                            </h3>
+                            
+                            <div class="input-group">
+                                <label class="input-label">What percentage of your income do you save or invest each month?</label>
+                                <input type="range" min="0" max="50" value="15" class="range-input" id="savingsRate">
+                                <div class="range-labels">
+                                    <span>0%</span>
+                                    <span>15%</span>
+                                    <span>30%+</span>
+                                </div>
+                                <span class="input-help">Recommended: Save at least 15-20% of income</span>
+                                <div class="range-value" id="savingsValue">15%</div>
+                            </div>
+                            
+                            <div class="input-group">
+                                <label class="input-label">Do you contribute to retirement accounts?</label>
+                                <div class="radio-group">
+                                    <label class="radio-label">
+                                        <input type="radio" name="retirement" value="4" required>
+                                        <span>Yes, maxing out contributions</span>
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="retirement" value="3" required checked>
+                                        <span>Yes, contributing regularly</span>
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="retirement" value="2" required>
+                                        <span>Yes, but minimal contributions</span>
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="retirement" value="1" required>
+                                        <span>No retirement savings</span>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="input-group">
+                                <label class="input-label">How would you describe your investment knowledge?</label>
+                                <div class="radio-group">
+                                    <label class="radio-label">
+                                        <input type="radio" name="investmentKnowledge" value="4" required>
+                                        <span>Advanced - I manage my own portfolio</span>
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="investmentKnowledge" value="3" required checked>
+                                        <span>Intermediate - I understand basic concepts</span>
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="investmentKnowledge" value="2" required>
+                                        <span>Beginner - Learning the basics</span>
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="investmentKnowledge" value="1" required>
+                                        <span>Limited - Not familiar with investing</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Insurance & Protection Section -->
+                        <div class="assessment-section">
+                            <h3 class="section-title">
+                                <i class="fas fa-user-shield"></i>
+                                4. Insurance & Financial Protection
+                            </h3>
+                            
+                            <div class="input-group">
+                                <label class="input-label">Which types of insurance do you have? (Select all that apply)</label>
+                                <div class="checkbox-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="insurance" value="health">
+                                        <span>Health Insurance</span>
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="insurance" value="auto">
+                                        <span>Auto Insurance</span>
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="insurance" value="home">
+                                        <span>Home/Renters Insurance</span>
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="insurance" value="life">
+                                        <span>Life Insurance</span>
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="insurance" value="disability">
+                                        <span>Disability Insurance</span>
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="insurance" value="liability">
+                                        <span>Umbrella Liability Insurance</span>
+                                    </label>
+                                </div>
+                                <span class="input-help">Having appropriate insurance coverage is crucial for financial protection</span>
+                            </div>
+                            
+                            <div class="input-group">
+                                <label class="input-label">Do you have important financial documents organized (will, power of attorney, etc.)?</label>
+                                <div class="radio-group">
+                                    <label class="radio-label">
+                                        <input type="radio" name="documents" value="4" required>
+                                        <span>Yes, all documents are current and organized</span>
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="documents" value="3" required checked>
+                                        <span>Most documents are in order</span>
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="documents" value="2" required>
+                                        <span>Some documents, but need updating</span>
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="documents" value="1" required>
+                                        <span>No important documents prepared</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Financial Goals Section -->
+                        <div class="assessment-section">
+                            <h3 class="section-title">
+                                <i class="fas fa-flag-checkered"></i>
+                                5. Financial Goals & Planning
+                            </h3>
+                            
+                            <div class="input-group">
+                                <label class="input-label">How would you describe your financial goal setting?</label>
+                                <div class="radio-group">
+                                    <label class="radio-label">
+                                        <input type="radio" name="goals" value="4" required>
+                                        <span>I have specific, written goals with timelines</span>
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="goals" value="3" required checked>
+                                        <span>I have general goals in mind</span>
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="goals" value="2" required>
+                                        <span>I have some ideas but no concrete plans</span>
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="goals" value="1" required>
+                                        <span>I don't have specific financial goals</span>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="input-group">
+                                <label class="input-label">How often do you review and adjust your financial plan?</label>
+                                <div class="radio-group">
+                                    <label class="radio-label">
+                                        <input type="radio" name="review" value="4" required>
+                                        <span>Quarterly or more often</span>
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="review" value="3" required checked>
+                                        <span>Annually</span>
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="review" value="2" required>
+                                        <span>Every few years</span>
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="review" value="1" required>
+                                        <span>Rarely or never</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button type="button" class="calculate-button" id="calculateScore">
+                            <i class="fas fa-calculator"></i>
+                            Calculate My Financial Health Score
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="results-container" id="resultsContainer">
+                <div class="score-display">
+                    <div class="score-circle" id="scoreCircle">
+                        <div class="score-value" id="scoreValue">0</div>
+                        <div class="score-label">/100</div>
+                    </div>
+                    <h2 id="scoreTitle">Calculating Your Score...</h2>
+                    <p id="scoreDescription">Based on your responses, here's your financial health assessment.</p>
+                </div>
+                
+                <div class="comparison-chart">
+                    <h3>How You Compare</h3>
+                    <div class="chart-label">
+                        <span>Your Score</span>
+                        <span id="userScoreChart">0</span>
+                    </div>
+                    <div class="chart-bar">
+                        <div class="chart-fill" id="userBar" style="width: 0%; background: var(--primary);">0%</div>
+                    </div>
+                    
+                    <div class="chart-label">
+                        <span>National Average (2025)</span>
+                        <span>62</span>
+                    </div>
+                    <div class="chart-bar">
+                        <div class="chart-fill" style="width: 62%; background: var(--gray);">62%</div>
+                    </div>
+                    
+                    <div class="chart-label">
+                        <span>Financial Expert Target</span>
+                        <span>85</span>
+                    </div>
+                    <div class="chart-bar">
+                        <div class="chart-fill" style="width: 85%; background: var(--secondary);">85%</div>
+                    </div>
+                </div>
+                
+                <div class="category-scores">
+                    <div class="category-score">
+                        <div class="category-name">Budgeting</div>
+                        <div class="category-value" id="catBudgeting">0</div>
+                        <div class="category-label">/20</div>
+                    </div>
+                    <div class="category-score">
+                        <div class="category-name">Emergency Fund</div>
+                        <div class="category-value" id="catEmergency">0</div>
+                        <div class="category-label">/20</div>
+                    </div>
+                    <div class="category-score">
+                        <div class="category-name">Debt Management</div>
+                        <div class="category-value" id="catDebt">0</div>
+                        <div class="category-label">/20</div>
+                    </div>
+                    <div class="category-score">
+                        <div class="category-name">Investments</div>
+                        <div class="category-value" id="catInvestments">0</div>
+                        <div class="category-label">/20</div>
+                    </div>
+                    <div class="category-score">
+                        <div class="category-name">Protection</div>
+                        <div class="category-value" id="catProtection">0</div>
+                        <div class="category-label">/20</div>
+                    </div>
+                </div>
+                
+                <div class="recommendations">
+                    <h3>Personalized Recommendations</h3>
+                    <div id="recommendationsList">
+                        <!-- Recommendations will be populated by JavaScript -->
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <a href="https://romstreet.net/tools" class="action-btn primary">
+                        <i class="fas fa-tools"></i>
+                        Explore More Tools
+                    </a>
+                    <a href="https://romstreet.net/articles/financial-health-guide" class="action-btn secondary">
+                        <i class="fas fa-book"></i>
+                        Read Our Financial Health Guide
+                    </a>
+                    <button class="action-btn secondary" onclick="window.print()">
+                        <i class="fas fa-print"></i>
+                        Print This Report
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>RomStreet</h3>
+                    <p>Your trusted guide to financial freedom. We provide practical advice to help you make smarter money decisions.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://romstreet.net">Home</a></li>
+                        <li><a href="https://romstreet.net/about">About Us</a></li>
+                        <li><a href="https://romstreet.net/privacy">Privacy Policy</a></li>
+                        <li><a href="https://romstreet.net/terms">Terms of Service</a></li>
+                        <li><a href="https://romstreet.net/contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Categories</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://romstreet.net/category/budgeting">Budgeting</a></li>
+                        <li><a href="https://romstreet.net/category/investing">Investing</a></li>
+                        <li><a href="https://romstreet.net/category/debt">Debt Management</a></li>
+                        <li><a href="https://romstreet.net/category/saving">Saving Money</a></li>
+                        <li><a href="https://romstreet.net/category/retirement">Retirement Planning</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://romstreet.net/articles">Articles</a></li>
+                        <li><a href="https://romstreet.net/tools">Free Tools</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>&copy; 2025 RomStreet. All rights reserved. This calculator provides educational estimates only. Consult a financial advisor for personalized advice.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navLinks = document.getElementById('navLinks');
+        
+        if(mobileToggle) {
+            mobileToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                const icon = mobileToggle.querySelector('i');
+                if (navLinks.classList.contains('active')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (event) => {
+            if (navLinks && mobileToggle && !navLinks.contains(event.target) && !mobileToggle.contains(event.target)) {
+                navLinks.classList.remove('active');
+                const icon = mobileToggle.querySelector('i');
+                if(icon) {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            }
+        });
+
+        // Range input value display
+        const rangeInputs = document.querySelectorAll('.range-input');
+        rangeInputs.forEach(input => {
+            const valueDisplay = input.parentElement.querySelector('.range-value');
+            
+            // Set initial value
+            if (valueDisplay) {
+                if (input.id === 'emergencyFund') {
+                    valueDisplay.textContent = `${input.value} months`;
+                } else {
+                    valueDisplay.textContent = `${input.value}%`;
+                }
+            }
+            
+            // Update on input
+            input.addEventListener('input', function() {
+                if (valueDisplay) {
+                    if (this.id === 'emergencyFund') {
+                        valueDisplay.textContent = `${this.value} months`;
+                    } else {
+                        valueDisplay.textContent = `${this.value}%`;
+                    }
+                }
+            });
+        });
+
+        // Financial Health Calculator Logic
+        document.getElementById('calculateScore').addEventListener('click', function() {
+            // Calculate category scores
+            let budgetingScore = 0;
+            let emergencyScore = 0;
+            let debtScore = 0;
+            let investmentScore = 0;
+            let protectionScore = 0;
+            
+            // 1. Budgeting & Spending (Max 20)
+            const spendingRate = parseInt(document.getElementById('spendingRate').value);
+            budgetingScore += Math.max(0, 10 - (spendingRate - 80) / 10); // Up to 10 points
+            
+            const expenseTracking = parseInt(document.querySelector('input[name="expenseTracking"]:checked').value);
+            budgetingScore += expenseTracking * 2.5; // Up to 10 points
+            
+            // 2. Emergency Fund & Debt (Max 20)
+            const emergencyFund = parseInt(document.getElementById('emergencyFund').value);
+            emergencyScore += Math.min(10, emergencyFund * 1.67); // Up to 10 points (6 months = 10 points)
+            
+            const debtRatio = parseInt(document.querySelector('input[name="debtRatio"]:checked').value);
+            debtScore += debtRatio * 2.5; // Up to 10 points
+            
+            const debtTypes = document.querySelectorAll('input[name="debtTypes"]:checked');
+            const debtTypeCount = debtTypes.length;
+            debtScore += Math.max(0, 5 - debtTypeCount); // Up to 5 points (fewer debt types = better)
+            
+            // 3. Savings & Investments (Max 20)
+            const savingsRate = parseInt(document.getElementById('savingsRate').value);
+            investmentScore += Math.min(10, savingsRate * 0.67); // Up to 10 points (15% = 10 points)
+            
+            const retirement = parseInt(document.querySelector('input[name="retirement"]:checked').value);
+            investmentScore += retirement * 2.5; // Up to 10 points
+            
+            // 4. Insurance & Protection (Max 20)
+            const insurance = document.querySelectorAll('input[name="insurance"]:checked');
+            const insuranceCount = insurance.length;
+            protectionScore += Math.min(10, insuranceCount * 2.5); // Up to 10 points
+            
+            const documents = parseInt(document.querySelector('input[name="documents"]:checked').value);
+            protectionScore += documents * 2.5; // Up to 10 points
+            
+            // 5. Financial Goals (Adds to existing categories)
+            const goals = parseInt(document.querySelector('input[name="goals"]:checked').value);
+            investmentScore += goals * 1.25; // Up to 5 points
+            
+            const review = parseInt(document.querySelector('input[name="review"]:checked').value);
+            budgetingScore += review * 1.25; // Up to 5 points
+            
+            // Investment knowledge (additional points for investments)
+            const investmentKnowledge = parseInt(document.querySelector('input[name="investmentKnowledge"]:checked').value);
+            investmentScore += investmentKnowledge * 1.25; // Up to 5 points
+            
+            // Calculate total score
+            const totalScore = Math.round(budgetingScore + emergencyScore + debtScore + investmentScore + protectionScore);
+            
+            // Update score display
+            document.getElementById('scoreValue').textContent = totalScore;
+            document.getElementById('userScoreChart').textContent = totalScore;
+            document.getElementById('userBar').style.width = `${totalScore}%`;
+            document.getElementById('userBar').textContent = `${totalScore}%`;
+            
+            // Update category scores
+            document.getElementById('catBudgeting').textContent = Math.round(budgetingScore);
+            document.getElementById('catEmergency').textContent = Math.round(emergencyScore);
+            document.getElementById('catDebt').textContent = Math.round(debtScore);
+            document.getElementById('catInvestments').textContent = Math.round(investmentScore);
+            document.getElementById('catProtection').textContent = Math.round(protectionScore);
+            
+            // Determine score category and update display
+            const scoreCircle = document.getElementById('scoreCircle');
+            const scoreTitle = document.getElementById('scoreTitle');
+            const scoreDescription = document.getElementById('scoreDescription');
+            
+            scoreCircle.className = 'score-circle ';
+            
+            if (totalScore >= 85) {
+                scoreCircle.classList.add('score-excellent');
+                scoreTitle.textContent = 'Excellent Financial Health!';
+                scoreDescription.textContent = 'You have strong financial habits and are on track for long-term financial success. Keep up the great work!';
+            } else if (totalScore >= 70) {
+                scoreCircle.classList.add('score-good');
+                scoreTitle.textContent = 'Good Financial Health';
+                scoreDescription.textContent = 'You have a solid financial foundation with room for some improvements in specific areas.';
+            } else if (totalScore >= 50) {
+                scoreCircle.classList.add('score-fair');
+                scoreTitle.textContent = 'Fair Financial Health';
+                scoreDescription.textContent = 'Your financial health needs attention. Focus on the recommendations below to improve your score.';
+            } else {
+                scoreCircle.classList.add('score-poor');
+                scoreTitle.textContent = 'Needs Improvement';
+                scoreDescription.textContent = 'Your financial health requires immediate attention. Start with the most critical recommendations below.';
+            }
+            
+            // Generate personalized recommendations
+            const recommendationsList = document.getElementById('recommendationsList');
+            recommendationsList.innerHTML = '';
+            
+            const recommendations = [];
+            
+            // Budgeting recommendations
+            if (budgetingScore < 12) {
+                recommendations.push({
+                    icon: 'fa-wallet',
+                    title: 'Improve Budgeting Habits',
+                    description: 'Start tracking all expenses using our budgeting tool. Aim to spend less than 80% of your income.',
+                    link: '#'
+                });
+            }
+            
+            if (emergencyScore < 10) {
+                recommendations.push({
+                    icon: 'fa-piggy-bank',
+                    title: 'Build Emergency Fund',
+                    description: `You have ${emergencyFund} months of expenses saved. Aim for 3-6 months for better financial security.`,
+                    link: '#'
+                });
+            }
+            
+            if (debtScore < 12) {
+                recommendations.push({
+                    icon: 'fa-credit-card',
+                    title: 'Reduce Debt',
+                    description: 'Focus on paying down high-interest debt first. Consider using our debt payoff calculator.',
+                    link: '#'
+                });
+            }
+            
+            if (investmentScore < 12) {
+                recommendations.push({
+                    icon: 'fa-chart-line',
+                    title: 'Increase Savings Rate',
+                    description: `You're saving ${savingsRate}% of income. Aim for 15-20% to build wealth faster.`,
+                    link: '#'
+                });
+            }
+            
+            if (retirement < 3) {
+                recommendations.push({
+                    icon: 'fa-umbrella-beach',
+                    title: 'Boost Retirement Savings',
+                    description: 'Increase retirement account contributions. Take advantage of employer matches if available.',
+                    link: '#'
+                });
+            }
+            
+            if (protectionScore < 12) {
+                recommendations.push({
+                    icon: 'fa-user-shield',
+                    title: 'Strengthen Financial Protection',
+                    description: 'Review insurance coverage and organize important financial documents.',
+                    link: '#'
+                });
+            }
+            
+            // Add up to 3 general recommendations if we don't have enough specific ones
+            const generalRecs = [
+                {
+                    icon: 'fa-bullseye',
+                    title: 'Set Specific Financial Goals',
+                    description: 'Write down specific, measurable financial goals with timelines for achievement.',
+                    link: '#'
+                },
+                {
+                    icon: 'fa-graduation-cap',
+                    title: 'Increase Financial Knowledge',
+                    description: 'Spend 30 minutes weekly learning about personal finance topics.',
+                    link: '#'
+                },
+                {
+                    icon: 'fa-calendar-check',
+                    title: 'Schedule Regular Financial Reviews',
+                    description: 'Review your finances quarterly to track progress and make adjustments.',
+                    link: '#'
+                }
+            ];
+            
+            while (recommendations.length < 3) {
+                const randomRec = generalRecs[Math.floor(Math.random() * generalRecs.length)];
+                if (!recommendations.some(r => r.title === randomRec.title)) {
+                    recommendations.push(randomRec);
+                }
+            }
+            
+            // Display recommendations
+            recommendations.forEach(rec => {
+                const recElement = document.createElement('div');
+                recElement.className = 'recommendation-item';
+                recElement.innerHTML = `
+                    <div class="rec-icon">
+                        <i class="fas ${rec.icon}"></i>
+                    </div>
+                    <div class="rec-content">
+                        <h4>${rec.title}</h4>
+                        <p>${rec.description}</p>
+                        <a href="${rec.link}" target="_blank" style="color: var(--primary); font-weight: 600; display: inline-flex; align-items: center; gap: 8px; margin-top: 10px;">
+                            <i class="fas fa-external-link-alt"></i>
+                            Learn More
+                        </a>
+                    </div>
+                `;
+                recommendationsList.appendChild(recElement);
+            });
+            
+            // Show results container
+            document.getElementById('resultsContainer').style.display = 'block';
+            
+            // Scroll to results
+            document.getElementById('resultsContainer').scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+            
+            // Update step indicators
+            document.querySelectorAll('.step-indicator').forEach((step, index) => {
+                step.classList.add('active');
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

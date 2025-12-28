@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Savings Goal Calculator | RomStreet - Plan & Track Your Savings Goals 2025</title>
+    <meta name="title" content="Savings Goal Calculator | RomStreet - Plan & Track Your Savings Goals 2025">
+    <meta name="description" content="Use our free savings goal calculator to plan for any financial goal. Calculate how much to save monthly, track progress, and get personalized savings strategies.">
+    <meta name="keywords" content="savings goal calculator, financial goal planner, savings plan calculator, money saving goals, savings target calculator, financial planning tool">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://romstreet.net/tools/savings-goal-calculator">
+    <link rel="stylesheet" href="/styles.css">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://romstreet.net/tools/savings-goal-calculator">
+    <meta property="og:title" content="Savings Goal Calculator | RomStreet - Plan & Track Your Savings Goals 2025">
+    <meta property="og:description" content="Use our free savings goal calculator to plan for any financial goal. Calculate how much to save monthly and track progress.">
+    <meta property="og:image" content="https://romstreet.net/img/savings-goal-calculator.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="RomStreet">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://romstreet.net/tools/savings-goal-calculator">
+    <meta property="twitter:title" content="Savings Goal Calculator | RomStreet - Plan & Track Your Savings Goals 2025">
+    <meta property="twitter:description" content="Use our free savings goal calculator to plan for any financial goal. Calculate how much to save monthly and track progress.">
+    <meta property="twitter:image" content="https://romstreet.net/img/savings-goal-calculator.webp">
+    
+    <!-- Schema.org WebApplication Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Savings Goal Calculator",
+      "url": "https://romstreet.net/tools/savings-goal-calculator",
+      "description": "Free savings goal calculator that helps you plan for any financial goal with monthly savings calculations, progress tracking, and personalized strategies.",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Any",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "RomStreet"
+      },
+      "featureList": [
+        "Multiple goal tracking",
+        "Monthly savings calculation",
+        "Time-to-goal estimation",
+        "Inflation adjustment",
+        "Progress visualization",
+        "Savings strategy recommendations"
+      ],
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://romstreet.net/tools/savings-goal-calculator"
+      }
+    }
+    </script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://romstreet.net/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://romstreet.net/img/apple-touch-icon.png">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Slab:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Savings Goal Calculator specific styles - 100% mobile safe */
+        .calculator-hero {
+            background: linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%);
+            color: white;
+            padding: 40px 0 30px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .calculator-title {
+            font-family: 'Roboto Slab', serif;
+            font-size: 32px;
+            line-height: 1.2;
+            margin-bottom: 15px;
+        }
+        
+        .calculator-subtitle {
+            font-size: 18px;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto 25px;
+        }
+        
+        .goal-types {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin: 30px 0;
+        }
+        
+        .goal-type-btn {
+            padding: 12px 25px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .goal-type-btn:hover,
+        .goal-type-btn.active {
+            background: white;
+            color: var(--primary);
+        }
+        
+        .calculator-container {
+            max-width: 1000px;
+            margin: 0 auto 40px;
+        }
+        
+        .calculator-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+        
+        .calculator-header {
+            background: linear-gradient(135deg, #34a853 0%, #2e7d32 100%);
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+        
+        .calculator-header h2 {
+            font-family: 'Roboto Slab', serif;
+            font-size: 26px;
+            margin-bottom: 10px;
+        }
+        
+        .calculator-body {
+            padding: 30px;
+        }
+        
+        .goal-setup-section {
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            font-family: 'Roboto Slab', serif;
+            font-size: 22px;
+            color: var(--primary-dark);
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .section-title i {
+            color: var(--primary);
+        }
+        
+        .goal-inputs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        
+        .input-group {
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        .input-label {
+            display: block;
+            margin-bottom: 12px;
+            font-weight: 600;
+            color: var(--dark);
+            font-size: 16px;
+        }
+        
+        .input-with-icon {
+            position: relative;
+        }
+        
+        .dollar-icon {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--gray);
+        }
+        
+        .calendar-icon {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--gray);
+        }
+        
+        .number-input,
+        .date-input {
+            width: 100%;
+            padding: 15px 45px 15px 45px;
+            border: 2px solid var(--light-gray);
+            border-radius: 8px;
+            font-size: 18px;
+            font-family: 'Poppins', sans-serif;
+            transition: var(--transition);
+        }
+        
+        .date-input {
+            padding: 15px 45px 15px 15px;
+        }
+        
+        .number-input:focus,
+        .date-input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.2);
+        }
+        
+        .input-help {
+            display: block;
+            margin-top: 8px;
+            color: var(--gray);
+            font-size: 14px;
+        }
+        
+        .calculate-button {
+            background: linear-gradient(135deg, #fbbc04 0%, #e6ac00 100%);
+            color: var(--dark);
+            padding: 18px 45px;
+            border: none;
+            border-radius: 10px;
+            font-size: 20px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin: 30px auto;
+            display: block;
+        }
+        
+        .calculate-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(251, 188, 4, 0.3);
+        }
+        
+        .advanced-options {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 25px;
+            margin: 30px 0;
+        }
+        
+        .toggle-advanced {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+            color: var(--primary);
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+        
+        .advanced-content {
+            display: none;
+        }
+        
+        .advanced-content.active {
+            display: block;
+        }
+        
+        .results-container {
+            display: none;
+            margin-top: 40px;
+        }
+        
+        .results-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .goal-summary {
+            background: linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%);
+            color: white;
+            border-radius: 12px;
+            padding: 35px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .goal-name {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        
+        .goal-amount {
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+        
+        .goal-timeline {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+        
+        .savings-plan {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin: 40px 0;
+        }
+        
+        .plan-card {
+            flex: 1;
+            min-width: 250px;
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            border-top: 5px solid;
+        }
+        
+        .plan-card.monthly {
+            border-top-color: #34a853;
+        }
+        
+        .plan-card.total {
+            border-top-color: #1a73e8;
+        }
+        
+        .plan-card.time {
+            border-top-color: #fbbc04;
+        }
+        
+        .plan-label {
+            font-size: 18px;
+            color: var(--gray);
+            margin-bottom: 15px;
+            display: block;
+        }
+        
+        .plan-value {
+            font-size: 36px;
+            font-weight: 800;
+            margin-bottom: 10px;
+            display: block;
+        }
+        
+        .plan-detail {
+            font-size: 16px;
+            color: var(--gray);
+        }
+        
+        .progress-visualization {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 40px 0;
+        }
+        
+        .progress-title {
+            font-family: 'Roboto Slab', serif;
+            font-size: 24px;
+            color: var(--primary-dark);
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        
+        .progress-bar-container {
+            height: 40px;
+            background: #e0e0e0;
+            border-radius: 20px;
+            margin: 30px 0;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .progress-bar {
+            height: 100%;
+            border-radius: 20px;
+            transition: width 1s ease;
+            display: flex;
+            align-items: center;
+            padding-left: 20px;
+            color: white;
+            font-weight: 600;
+            min-width: 60px;
+            background: linear-gradient(135deg, #34a853 0%, #2e7d32 100%);
+        }
+        
+        .progress-labels {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            font-weight: 600;
+        }
+        
+        .milestone-container {
+            margin: 40px 0;
+        }
+        
+        .milestone-title {
+            font-family: 'Roboto Slab', serif;
+            font-size: 22px;
+            color: var(--primary-dark);
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        
+        .milestone-timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+        
+        .milestone-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            position: relative;
+        }
+        
+        .milestone-marker {
+            width: 40px;
+            height: 40px;
+            background: #e8f0fe;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: var(--primary);
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+        
+        .milestone-content {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            flex: 1;
+        }
+        
+        .milestone-amount {
+            font-weight: 700;
+            font-size: 18px;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+        
+        .milestone-date {
+            color: var(--gray);
+            font-size: 14px;
+        }
+        
+        .strategies-container {
+            margin: 40px 0;
+        }
+        
+        .strategies-title {
+            font-family: 'Roboto Slab', serif;
+            font-size: 24px;
+            color: var(--primary-dark);
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        
+        .strategy-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+        
+        .strategy-card {
+            flex: 1;
+            min-width: 250px;
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: var(--shadow);
+            border-left: 4px solid;
+        }
+        
+        .strategy-card.boost {
+            border-left-color: #34a853;
+        }
+        
+        .strategy-card.automate {
+            border-left-color: #1a73e8;
+        }
+        
+        .strategy-card.reduce {
+            border-left-color: #fbbc04;
+        }
+        
+        .strategy-icon {
+            width: 60px;
+            height: 60px;
+            background: #e8f0fe;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        
+        .strategy-title {
+            font-family: 'Roboto Slab', serif;
+            font-size: 20px;
+            color: var(--primary-dark);
+            margin-bottom: 15px;
+        }
+        
+        .action-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 40px;
+        }
+        
+        .action-btn {
+            padding: 15px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: var(--transition);
+        }
+        
+        .action-btn.primary {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .action-btn.secondary {
+            background: #f8f9fa;
+            color: var(--dark);
+            border: 2px solid #e0e0e0;
+        }
+        
+        .action-btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        .printable-plan {
+            background: #fff8e6;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 40px 0;
+            border: 2px dashed #fbbc04;
+        }
+        
+        .plan-title {
+            font-family: 'Roboto Slab', serif;
+            font-size: 24px;
+            color: var(--primary-dark);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .plan-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        
+        .plan-section {
+            background: white;
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: var(--shadow);
+        }
+        
+        /* Mobile adjustments */
+        @media (max-width: 767px) {
+            .calculator-title {
+                font-size: 28px;
+            }
+            
+            .calculator-body {
+                padding: 20px;
+            }
+            
+            .section-title {
+                font-size: 20px;
+            }
+            
+            .goal-inputs {
+                flex-direction: column;
+            }
+            
+            .input-group {
+                min-width: 100%;
+            }
+            
+            .savings-plan {
+                flex-direction: column;
+            }
+            
+            .plan-card {
+                min-width: 100%;
+            }
+            
+            .strategy-cards {
+                flex-direction: column;
+            }
+            
+            .strategy-card {
+                min-width: 100%;
+            }
+            
+            .milestone-item {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .milestone-marker {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+            
+            .action-buttons {
+                flex-direction: column;
+            }
+            
+            .action-btn {
+                justify-content: center;
+            }
+            
+            .plan-details {
+                grid-template-columns: 1fr;
+            }
+            
+            .goal-types {
+                gap: 10px;
+            }
+            
+            .goal-type-btn {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+        }
+        
+        @media (min-width: 768px) and (max-width: 1024px) {
+            .plan-details {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="https://romstreet.net" class="logo">
+                    <i class="fas fa-chart-line"></i>
+                    RomStreet
+                </a>
+                <button class="mobile-toggle" id="mobileToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="https://romstreet.net">Home</a></li>
+                    <li><a href="https://romstreet.net/articles">Articles</a></li>
+                    <li><a href="https://romstreet.net/category/budgeting">Budgeting</a></li>
+                    <li><a href="https://romstreet.net/category/investing">Investing</a></li>
+                    <li><a href="https://romstreet.net/category/saving">Saving</a></li>
+                    <li><a href="https://romstreet.net/category/debt">Debt</a></li>
+                    <li><a href="https://romstreet.net/category/retirement">Retirement</a></li>
+                    <li><a href="https://romstreet.net/tools" class="active">Tools</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="calculator-hero">
+        <div class="container">
+            <h1 class="calculator-title">Savings Goal Calculator</h1>
+            <p class="calculator-subtitle">Plan for any financial goal with our smart savings calculator. Get a personalized savings plan with monthly targets and progress tracking.</p>
+            
+            <div class="goal-types">
+                <button class="goal-type-btn active" data-goal="emergency">
+                    <i class="fas fa-shield-alt"></i>
+                    Emergency Fund
+                </button>
+                <button class="goal-type-btn" data-goal="vacation">
+                    <i class="fas fa-umbrella-beach"></i>
+                    Vacation
+                </button>
+                <button class="goal-type-btn" data-goal="downpayment">
+                    <i class="fas fa-home"></i>
+                    House Down Payment
+                </button>
+                <button class="goal-type-btn" data-goal="car">
+                    <i class="fas fa-car"></i>
+                    New Car
+                </button>
+                <button class="goal-type-btn" data-goal="wedding">
+                    <i class="fas fa-heart"></i>
+                    Wedding
+                </button>
+                <button class="goal-type-btn" data-goal="custom">
+                    <i class="fas fa-star"></i>
+                    Custom Goal
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="calculator-container">
+            <div class="calculator-card">
+                <div class="calculator-header">
+                    <h2>Your Savings Goal Calculator</h2>
+                    <p>Set your goal, and we'll create a personalized savings plan for you</p>
+                </div>
+                
+                <div class="calculator-body">
+                    <div class="goal-setup-section">
+                        <h3 class="section-title">
+                            <i class="fas fa-bullseye"></i>
+                            Define Your Savings Goal
+                        </h3>
+                        
+                        <div class="goal-inputs">
+                            <div class="input-group">
+                                <label class="input-label">Goal Name</label>
+                                <input type="text" id="goalName" class="number-input" placeholder="Emergency Fund" value="Emergency Fund">
+                            </div>
+                            
+                            <div class="input-group">
+                                <label class="input-label">Target Amount</label>
+                                <div class="input-with-icon">
+                                    <span class="dollar-icon">$</span>
+                                    <input type="number" id="goalAmount" class="number-input" placeholder="10000" min="0" step="100" value="10000">
+                                </div>
+                                <span class="input-help">How much money do you need to save?</span>
+                            </div>
+                            
+                            <div class="input-group">
+                                <label class="input-label">Target Date</label>
+                                <div class="input-with-icon">
+                                    <input type="date" id="goalDate" class="date-input" value="2026-12-31">
+                                    <span class="calendar-icon"><i class="far fa-calendar-alt"></i></span>
+                                </div>
+                                <span class="input-help">When do you want to reach your goal?</span>
+                            </div>
+                            
+                            <div class="input-group">
+                                <label class="input-label">Already Saved</label>
+                                <div class="input-with-icon">
+                                    <span class="dollar-icon">$</span>
+                                    <input type="number" id="alreadySaved" class="number-input" placeholder="0" min="0" step="100" value="0">
+                                </div>
+                                <span class="input-help">How much have you already saved?</span>
+                            </div>
+                        </div>
+                        
+                        <div class="advanced-options">
+                            <div class="toggle-advanced" id="toggleAdvanced">
+                                <i class="fas fa-cog"></i>
+                                <span>Advanced Options</span>
+                                <i class="fas fa-chevron-down" id="advancedArrow"></i>
+                            </div>
+                            
+                            <div class="advanced-content" id="advancedContent">
+                                <div class="goal-inputs">
+                                    <div class="input-group">
+                                        <label class="input-label">Expected Annual Return (%)</label>
+                                        <input type="number" id="annualReturn" class="number-input" placeholder="2" min="0" max="20" step="0.1" value="2">
+                                        <span class="input-help">Interest or investment return on savings</span>
+                                    </div>
+                                    
+                                    <div class="input-group">
+                                        <label class="input-label">Annual Inflation Rate (%)</label>
+                                        <input type="number" id="inflationRate" class="number-input" placeholder="3" min="0" max="10" step="0.1" value="3">
+                                        <span class="input-help">For long-term goals, adjust for inflation</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button class="calculate-button" id="calculateGoal">
+                            <i class="fas fa-calculator"></i>
+                            Calculate My Savings Plan
+                        </button>
+                    </div>
+                    
+                    <div class="results-container" id="resultsContainer">
+                        <div class="results-header">
+                            <h2>Your Personalized Savings Plan</h2>
+                            <p>Here's exactly how to reach your savings goal on time</p>
+                        </div>
+                        
+                        <div class="goal-summary">
+                            <div class="goal-name" id="displayGoalName">Emergency Fund</div>
+                            <div class="goal-amount" id="displayGoalAmount">$10,000</div>
+                            <div class="goal-timeline" id="displayTimeline">Target Date: December 31, 2026</div>
+                        </div>
+                        
+                        <div class="savings-plan">
+                            <div class="plan-card monthly">
+                                <span class="plan-label">Monthly Savings Needed</span>
+                                <span class="plan-value" id="monthlySavings">$417</span>
+                                <span class="plan-detail" id="weeklySavings">$96 per week</span>
+                            </div>
+                            
+                            <div class="plan-card total">
+                                <span class="plan-label">Total to Save</span>
+                                <span class="plan-value" id="totalToSave">$10,000</span>
+                                <span class="plan-detail" id="alreadySavedDisplay">$0 already saved</span>
+                            </div>
+                            
+                            <div class="plan-card time">
+                                <span class="plan-label">Time to Goal</span>
+                                <span class="plan-value" id="timeToGoal">24</span>
+                                <span class="plan-detail">Months remaining</span>
+                            </div>
+                        </div>
+                        
+                        <div class="progress-visualization">
+                            <h3 class="progress-title">Your Progress</h3>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar" id="progressBar" style="width: 0%;">0%</div>
+                            </div>
+                            <div class="progress-labels">
+                                <span id="progressStart">$0</span>
+                                <span id="progressCurrent">$0 saved</span>
+                                <span id="progressEnd">$10,000</span>
+                            </div>
+                        </div>
+                        
+                        <div class="milestone-container">
+                            <h3 class="milestone-title">Savings Milestones</h3>
+                            <div class="milestone-timeline" id="milestoneTimeline">
+                                <!-- Milestones will be populated by JavaScript -->
+                            </div>
+                        </div>
+                        
+                        <div class="strategies-container">
+                            <h3 class="strategies-title">Savings Strategies & Tips</h3>
+                            <div class="strategy-cards">
+                                <div class="strategy-card boost">
+                                    <div class="strategy-icon">
+                                        <i class="fas fa-rocket"></i>
+                                    </div>
+                                    <h4 class="strategy-title">Boost Your Savings</h4>
+                                    <p>Set up automatic transfers on payday. Even small increases can dramatically shorten your timeline.</p>
+                                </div>
+                                
+                                <div class="strategy-card automate">
+                                    <div class="strategy-icon">
+                                        <i class="fas fa-robot"></i>
+                                    </div>
+                                    <h4 class="strategy-title">Automate Savings</h4>
+                                    <p>Use bank auto-transfer features to move money to savings immediately when you get paid.</p>
+                                </div>
+                                
+                                <div class="strategy-card reduce">
+                                    <div class="strategy-icon">
+                                        <i class="fas fa-chart-line-down"></i>
+                                    </div>
+                                    <h4 class="strategy-title">Reduce Expenses</h4>
+                                    <p>Identify one monthly subscription or expense to cut, and redirect that money to your goal.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="printable-plan">
+                            <h3 class="plan-title">📋 Printable Savings Plan</h3>
+                            <div class="plan-details">
+                                <div class="plan-section">
+                                    <h4>Goal Details</h4>
+                                    <p><strong>Goal:</strong> <span id="printGoalName">Emergency Fund</span></p>
+                                    <p><strong>Target Amount:</strong> <span id="printGoalAmount">$10,000</span></p>
+                                    <p><strong>Target Date:</strong> <span id="printGoalDate">December 31, 2026</span></p>
+                                    <p><strong>Already Saved:</strong> <span id="printAlreadySaved">$0</span></p>
+                                </div>
+                                
+                                <div class="plan-section">
+                                    <h4>Monthly Plan</h4>
+                                    <p><strong>Monthly Savings Needed:</strong> <span id="printMonthlySavings">$417</span></p>
+                                    <p><strong>Weekly Equivalent:</strong> <span id="printWeeklySavings">$96</span></p>
+                                    <p><strong>Daily Equivalent:</strong> <span id="printDailySavings">$14</span></p>
+                                    <p><strong>Months Remaining:</strong> <span id="printMonthsRemaining">24</span></p>
+                                </div>
+                                
+                                <div class="plan-section">
+                                    <h4>Progress Tracking</h4>
+                                    <p>Month 1: __________ / <span id="printMonth1">$417</span></p>
+                                    <p>Month 2: __________ / <span id="printMonth2">$417</span></p>
+                                    <p>Month 3: __________ / <span id="printMonth3">$417</span></p>
+                                    <p>Month 4: __________ / <span id="printMonth4">$417</span></p>
+                                    <p>Month 5: __________ / <span id="printMonth5">$417</span></p>
+                                    <p>Month 6: __________ / <span id="printMonth6">$417</span></p>
+                                </div>
+                                
+                                <div class="plan-section">
+                                    <h4>Success Checklist</h4>
+                                    <p>☐ Set up automatic transfers</p>
+                                    <p>☐ Open dedicated savings account</p>
+                                    <p>☐ Review progress monthly</p>
+                                    <p>☐ Celebrate milestones</p>
+                                    <p>☐ Adjust plan if needed</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="action-buttons">
+                            <button class="action-btn primary" onclick="window.print()">
+                                <i class="fas fa-print"></i>
+                                Print This Plan
+                            </button>
+                            <a href="https://romstreet.net/tools/budget-calculator" class="action-btn secondary">
+                                <i class="fas fa-tools"></i>
+                                Try Budget Calculator
+                            </a>
+                            <a href="https://romstreet.net/category/saving" class="action-btn secondary">
+                                <i class="fas fa-book"></i>
+                                Read Savings Guide
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>RomStreet</h3>
+                    <p>Your trusted guide to financial freedom. We provide practical advice to help you make smarter money decisions.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://romstreet.net">Home</a></li>
+                        <li><a href="https://romstreet.net/about">About Us</a></li>
+                        <li><a href="https://romstreet.net/privacy">Privacy Policy</a></li>
+                        <li><a href="https://romstreet.net/terms">Terms of Service</a></li>
+                        <li><a href="https://romstreet.net/contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Categories</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://romstreet.net/category/budgeting">Budgeting</a></li>
+                        <li><a href="https://romstreet.net/category/investing">Investing</a></li>
+                        <li><a href="https://romstreet.net/category/debt">Debt Management</a></li>
+                        <li><a href="https://romstreet.net/category/saving">Saving Money</a></li>
+                        <li><a href="https://romstreet.net/category/retirement">Retirement Planning</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://romstreet.net/articles">Articles</a></li>
+                        <li><a href="https://romstreet.net/tools">Free Tools</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>&copy; 2025 RomStreet. All rights reserved. This calculator provides savings estimates only. Actual results may vary based on market conditions.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navLinks = document.getElementById('navLinks');
+        
+        if(mobileToggle) {
+            mobileToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                const icon = mobileToggle.querySelector('i');
+                if (navLinks.classList.contains('active')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (event) => {
+            if (navLinks && mobileToggle && !navLinks.contains(event.target) && !mobileToggle.contains(event.target)) {
+                navLinks.classList.remove('active');
+                const icon = mobileToggle.querySelector('i');
+                if(icon) {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            }
+        });
+
+        // Goal type buttons
+        document.querySelectorAll('.goal-type-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                // Update active button
+                document.querySelectorAll('.goal-type-btn').forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+                
+                const goalType = this.dataset.goal;
+                const goalNameInput = document.getElementById('goalName');
+                const goalAmountInput = document.getElementById('goalAmount');
+                
+                // Set default values based on goal type
+                switch(goalType) {
+                    case 'emergency':
+                        goalNameInput.value = 'Emergency Fund';
+                        goalAmountInput.value = '10000';
+                        break;
+                    case 'vacation':
+                        goalNameInput.value = 'Dream Vacation';
+                        goalAmountInput.value = '5000';
+                        break;
+                    case 'downpayment':
+                        goalNameInput.value = 'House Down Payment';
+                        goalAmountInput.value = '50000';
+                        break;
+                    case 'car':
+                        goalNameInput.value = 'New Car';
+                        goalAmountInput.value = '25000';
+                        break;
+                    case 'wedding':
+                        goalNameInput.value = 'Wedding';
+                        goalAmountInput.value = '30000';
+                        break;
+                    case 'custom':
+                        goalNameInput.value = 'My Custom Goal';
+                        goalAmountInput.value = '5000';
+                        break;
+                }
+            });
+        });
+
+        // Advanced options toggle
+        document.getElementById('toggleAdvanced').addEventListener('click', function() {
+            const content = document.getElementById('advancedContent');
+            const arrow = document.getElementById('advancedArrow');
+            
+            content.classList.toggle('active');
+            if (content.classList.contains('active')) {
+                arrow.classList.remove('fa-chevron-down');
+                arrow.classList.add('fa-chevron-up');
+            } else {
+                arrow.classList.remove('fa-chevron-up');
+                arrow.classList.add('fa-chevron-down');
+            }
+        });
+
+        // Savings Goal Calculator Logic
+        document.getElementById('calculateGoal').addEventListener('click', function() {
+            // Get input values
+            const goalName = document.getElementById('goalName').value || 'My Goal';
+            const goalAmount = parseFloat(document.getElementById('goalAmount').value) || 0;
+            const goalDate = new Date(document.getElementById('goalDate').value);
+            const alreadySaved = parseFloat(document.getElementById('alreadySaved').value) || 0;
+            const annualReturn = parseFloat(document.getElementById('annualReturn').value) || 0;
+            const inflationRate = parseFloat(document.getElementById('inflationRate').value) || 0;
+            
+            // Get today's date
+            const today = new Date();
+            
+            // Calculate months remaining
+            const monthsRemaining = Math.max(1, Math.ceil((goalDate - today) / (1000 * 60 * 60 * 24 * 30.44)));
+            
+            // Adjust goal amount for inflation if it's a long-term goal
+            const monthsForInflation = monthsRemaining / 12;
+            const inflationAdjustedGoal = goalAmount * Math.pow(1 + (inflationRate / 100), monthsForInflation);
+            
+            // Calculate amount needed to save
+            const amountToSave = Math.max(0, inflationAdjustedGoal - alreadySaved);
+            
+            // Calculate monthly savings needed with compound interest
+            let monthlySavings;
+            if (annualReturn > 0) {
+                const monthlyRate = annualReturn / 100 / 12;
+                monthlySavings = amountToSave * monthlyRate / (Math.pow(1 + monthlyRate, monthsRemaining) - 1);
+            } else {
+                monthlySavings = amountToSave / monthsRemaining;
+            }
+            
+            // Format currency
+            const formatCurrency = (amount) => {
+                return '$' + amount.toLocaleString('en-US', {
+                    minimumFractionDigits: 0,
+                    maximumFractionDigits: 0
+                });
+            };
+            
+            const formatCurrencyWithCents = (amount) => {
+                return '$' + amount.toLocaleString('en-US', {
+                    minimumFractionDigits: 2,
+                    maximumFractionDigits: 2
+                });
+            };
+            
+            // Format date
+            const formatDate = (date) => {
+                return date.toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric'
+                });
+            };
+            
+            // Update display
+            document.getElementById('displayGoalName').textContent = goalName;
+            document.getElementById('displayGoalAmount').textContent = formatCurrency(goalAmount);
+            document.getElementById('displayTimeline').textContent = `Target Date: ${formatDate(goalDate)}`;
+            
+            document.getElementById('monthlySavings').textContent = formatCurrencyWithCents(monthlySavings);
+            document.getElementById('weeklySavings').textContent = `${formatCurrencyWithCents(monthlySavings / 4.33)} per week`;
+            
+            document.getElementById('totalToSave').textContent = formatCurrency(goalAmount);
+            document.getElementById('alreadySavedDisplay').textContent = `${formatCurrency(alreadySaved)} already saved`;
+            
+            document.getElementById('timeToGoal').textContent = monthsRemaining;
+            
+            // Update progress bar
+            const progressPercentage = Math.min(100, (alreadySaved / goalAmount) * 100);
+            document.getElementById('progressBar').style.width = `${progressPercentage}%`;
+            document.getElementById('progressBar').textContent = `${progressPercentage.toFixed(1)}%`;
+            
+            document.getElementById('progressStart').textContent = formatCurrency(0);
+            document.getElementById('progressCurrent').textContent = `${formatCurrency(alreadySaved)} saved`;
+            document.getElementById('progressEnd').textContent = formatCurrency(goalAmount);
+            
+            // Generate milestones
+            const milestoneTimeline = document.getElementById('milestoneTimeline');
+            milestoneTimeline.innerHTML = '';
+            
+            const milestoneCount = Math.min(5, Math.floor(monthsRemaining / 3));
+            for (let i = 1; i <= milestoneCount; i++) {
+                const milestoneMonth = Math.floor(monthsRemaining * (i / (milestoneCount + 1)));
+                const milestoneDate = new Date(today);
+                milestoneDate.setMonth(today.getMonth() + milestoneMonth);
+                
+                const milestoneAmount = alreadySaved + (monthlySavings * milestoneMonth);
+                
+                const milestoneItem = document.createElement('div');
+                milestoneItem.className = 'milestone-item';
+                milestoneItem.innerHTML = `
+                    <div class="milestone-marker">${i}</div>
+                    <div class="milestone-content">
+                        <div class="milestone-amount">${formatCurrency(milestoneAmount)}</div>
+                        <div class="milestone-date">Target: ${formatDate(milestoneDate)}</div>
+                        <p>After ${milestoneMonth} months of saving</p>
+                    </div>
+                `;
+                milestoneTimeline.appendChild(milestoneItem);
+            }
+            
+            // Update printable plan
+            document.getElementById('printGoalName').textContent = goalName;
+            document.getElementById('printGoalAmount').textContent = formatCurrency(goalAmount);
+            document.getElementById('printGoalDate').textContent = formatDate(goalDate);
+            document.getElementById('printAlreadySaved').textContent = formatCurrency(alreadySaved);
+            
+            document.getElementById('printMonthlySavings').textContent = formatCurrencyWithCents(monthlySavings);
+            document.getElementById('printWeeklySavings').textContent = formatCurrencyWithCents(monthlySavings / 4.33);
+            document.getElementById('printDailySavings').textContent = formatCurrencyWithCents(monthlySavings / 30.44);
+            document.getElementById('printMonthsRemaining').textContent = monthsRemaining;
+            
+            // Update monthly tracking
+            for (let i = 1; i <= 6; i++) {
+                document.getElementById(`printMonth${i}`).textContent = formatCurrencyWithCents(monthlySavings);
+            }
+            
+            // Show results container
+            document.getElementById('resultsContainer').style.display = 'block';
+            
+            // Scroll to results
+            document.getElementById('resultsContainer').scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        });
+
+        // Allow recalculating when inputs change
+        const inputsToWatch = ['goalName', 'goalAmount', 'goalDate', 'alreadySaved', 'annualReturn', 'inflationRate'];
+        inputsToWatch.forEach(inputId => {
+            document.getElementById(inputId).addEventListener('input', function() {
+                document.getElementById('resultsContainer').style.display = 'none';
+            });
+        });
+
+        // Set default date to 1 year from now
+        const defaultDate = new Date();
+        defaultDate.setFullYear(defaultDate.getFullYear() + 1);
+        document.getElementById('goalDate').value = defaultDate.toISOString().split('T')[0];
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Initialize with default calculation
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('calculateGoal').click();
+        });
+    </script>
+</body>
+</html>
