@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budgeting | RomStreet - Personal Finance</title>
+    <meta name="title" content="Budgeting | RomStreet - Personal Finance">
+    <meta name="description" content="Learn how to manage your finances effectively with our budgeting guides and tools.">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://romstreet.net/category/budgeting">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://romstreet.net/category/budgeting">
+    <meta property="og:title" content="Budgeting | RomStreet - Personal Finance">
+    <meta property="og:description" content="Learn how to manage your finances effectively with our budgeting guides and tools.">
+    <meta property="og:image" content="https://romstreet.net/img/romstreet-logo.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="RomStreet">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://romstreet.net/category/budgeting">
+    <meta property="twitter:title" content="Budgeting | RomStreet - Personal Finance">
+    <meta property="twitter:description" content="Learn how to manage your finances effectively with our budgeting guides and tools.">
+    <meta property="twitter:image" content="https://romstreet.net/img/romstreet-logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Slab:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #1a73e8;
+            --primary-dark: #0d47a1;
+            --secondary: #34a853;
+            --accent: #fbbc04;
+            --dark: #202124;
+            --light: #f8f9fa;
+            --gray: #5f6368;
+            --light-gray: #dadce0;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: white;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-family: 'Roboto Slab', serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo i {
+            color: var(--accent);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-links a.active {
+            color: var(--primary);
+        }
+
+        .nav-links a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--primary);
+        }
+
+        .mobile-toggle {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%);
+            color: white;
+            padding: 80px 0;
+            margin-bottom: 60px;
+        }
+
+        .hero-content {
+            max-width: 700px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-family: 'Roboto Slab', serif;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent);
+            color: var(--dark);
+            padding: 14px 32px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .cta-button:hover {
+            background-color: #e6ac00;
+            transform: translateY(-2px);
+        }
+
+        /* Featured Articles */
+        .section-title {
+            font-family: 'Roboto Slab', serif;
+            font-size: 32px;
+            margin-bottom: 40px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary);
+        }
+
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .article-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .article-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .article-img {
+            height: 200px;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gray);
+            font-size: 18px;
+        }
+
+        .article-content {
+            padding: 25px;
+        }
+
+        .article-category {
+            display: inline-block;
+            background-color: #e8f0fe;
+            color: var(--primary);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+
+        .article-title {
+            font-size: 20px;
+            margin-bottom: 10px;
+            font-family: 'Roboto Slab', serif;
+        }
+       .article-title a{
+            text-decoration: none;
+            color: var(--dark);
+            transition: var(--transition);
+        }
+
+        .article-title a:hover {
+            color: var(--primary);
+       }
+        .article-excerpt {
+            color: var(--gray);
+            margin-bottom: 20px;
+        }
+
+        .article-meta {
+            display: flex;
+            justify-content: space-between;
+            color: var(--gray);
+            font-size: 14px;
+            border-top: 1px solid var(--light-gray);
+            padding-top: 15px;
+        }
+
+        /* Finance Tools */
+        .finance-tools {
+            background-color: #f1f8ff;
+            padding: 60px 0;
+            margin: 60px 0;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .tool-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .tool-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .tool-icon {
+            background-color: #e8f0fe;
+            color: var(--primary);
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 28px;
+        }
+
+        .tool-title {
+            font-size: 20px;
+            margin-bottom: 15px;
+            font-family: 'Roboto Slab', serif;
+        }
+
+        /* Newsletter */
+        .newsletter {
+            background-color: var(--primary);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .newsletter-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .newsletter h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            font-family: 'Roboto Slab', serif;
+        }
+
+        .newsletter p {
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .newsletter-form {
+            display: flex;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 4px 0 0 4px;
+            font-size: 16px;
+        }
+
+        .newsletter-form button {
+            background-color: var(--accent);
+            color: var(--dark);
+            border: none;
+            padding: 0 25px;
+            border-radius: 0 4px 4px 0;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .newsletter-form button:hover {
+            background-color: #e6ac00;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h3 {
+            font-size: 20px;
+            margin-bottom: 25px;
+            font-family: 'Roboto Slab', serif;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--primary);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: #bdc1c6;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: #2d2f33;
+            color: white;
+            border-radius: 50%;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background-color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #2d2f33;
+            color: #bdc1c6;
+            font-size: 14px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 40px;
+            }
+            
+            .articles-grid {
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-toggle {
+                display: block;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                flex-direction: column;
+                align-items: center;
+                padding: 20px 0;
+                box-shadow: var(--shadow);
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: var(--transition);
+                z-index: 99;
+            }
+            
+            .nav-links.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+            
+            .hero {
+                padding: 60px 0;
+            }
+            
+            .hero h1 {
+                font-size: 32px;
+            }
+            
+            .section-title {
+                font-size: 28px;
+            }
+            
+            .newsletter-form {
+                flex-direction: column;
+            }
+            
+            .newsletter-form input {
+                border-radius: 4px;
+                margin-bottom: 15px;
+            }
+            
+            .newsletter-form button {
+                border-radius: 4px;
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .articles-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero {
+                padding: 50px 0;
+            }
+            
+            .hero h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <i class="fas fa-chart-line"></i>
+                    RomStreet
+                </div>
+                <div class="mobile-toggle" id="mobileToggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="https://romstreet.net">Home</a></li>
+                    <li><a href="https://romstreet.net/articles">Articles</a></li>
+                    <li><a href="https://romstreet.net/category/budgeting">Budgeting</a></li>
+                    <li><a href="https://romstreet.net/category/investing">Investing</a></li>
+                    <li><a href="https://romstreet.net/category/saving">Saving</a></li>
+                    <li><a href="https://romstreet.net/category/debt">Debt</a></li>
+                    <li><a href="https://romstreet.net/category/retirement">Retirement</a></li>
+                    <li><a href="https://romstreet.net/tools">Tools</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Check Out Our Latest Budgeting Articles</h1>
+                <p>Explore our latest articles on budgeting, financial planning, and money management. Stay informed and make smarter financial decisions with our expert tips and insights.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Featured Articles -->
+        <section class="featured-articles">
+            <h2 class="section-title">Featured Articles</h2>
+            <div class="articles-grid">
+                <article class="article-card">
+                    <div class="article-img">
+                        <img src="https://romstreet.net/img/50-30-20-rule-explained-and-when-it-fails.webp" width="100%" alt="The 50/30/20 Rule Explained (And When It Fails)">
+                    </div>
+                    <div class="article-content">
+                        <span class="article-category">Budgeting</span>
+                        <h3 class="article-title"><a href="https://romstreet.net/articles/50-30-20-rule-explained-and-when-it-fails">The 50/30/20 Rule Explained (And When It Fails)</h3></a>
+                        <div class="article-meta">
+                            <span><i class="far fa-user"></i> RomStreet</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-img">
+                        <img src="https://romstreet.net/img/best-budgeting-apps-track-every-dollar.webp" width="100%" alt="Best Budgeting Apps to Track Every Dollar You Spend in 2025">
+                    </div>
+                    <div class="article-content">
+                        <span class="article-category">Budgeting</span>
+                        <h3 class="article-title"><a href="https://romstreet.net/articles/best-budgeting-apps-track-every-dollar">Best Budgeting Apps to Track Every Dollar You Spend in 2025</h3></a>
+                        <div class="article-meta">
+                            <span><i class="far fa-user"></i> RomStreet</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-img">
+                        <img src="https://romstreet.net/img/budgeting-mistakes-that-keep-you-broke-and-how-to-fix-them.webp" width="100%" alt="Budgeting Mistakes That Keep You Broke (And How to Fix Them)">
+                    </div>
+                    <div class="article-content">
+                        <span class="article-category">Budgeting</span>
+                        <h3 class="article-title"><a href="https://romstreet.net/articles/budgeting-mistakes-that-keep-you-broke-and-how-to-fix-them">Budgeting Mistakes That Keep You Broke (And How to Fix Them)</h3></a>
+                        <div class="article-meta">
+                            <span><i class="far fa-user"></i> RomStreet</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-img">
+                        <img src="https://romstreet.net/img/create-monthly-budget-works-2025.webp" width="100%" alt="How to Create a Monthly Budget That Actually Works in 2025">
+                    </div>
+                    <div class="article-content">
+                        <span class="article-category">Budgeting</span>
+                        <h3 class="article-title"><a href="https://romstreet.net/articles/create-monthly-budget-works-2025">How to Create a Monthly Budget That Actually Works in 2025</h3></a>
+                        <div class="article-meta">
+                            <span><i class="far fa-user"></i> RomStreet</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-img">
+                        <img src="https://romstreet.net/img/how-to-budget-on-an-irregular-income.webp" width="100%" alt="How to Budget on an Irregular Income in 2025">
+                    </div>
+                    <div class="article-content">
+                        <span class="article-category">Budgeting</span>
+                        <h3 class="article-title"><a href="https://romstreet.net/articles/how-to-budget-on-an-irregular-income">How to Budget on an Irregular Income in 2025</h3></a>
+                        <div class="article-meta">
+                            <span><i class="far fa-user"></i> RomStreet</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-img">
+                        <img src="https://romstreet.net/img/zero-based-budgeting-step-by-step-guide-for-beginners.webp" width="100%" alt="Zero-Based Budgeting: Step-by-Step Guide for Beginners">
+                    </div>
+                    <div class="article-content">
+                        <span class="article-category">Budgeting</span>
+                        <h3 class="article-title"><a href="https://romstreet.net/articles/zero-based-budgeting-step-by-step-guide-for-beginners">Zero-Based Budgeting: Step-by-Step Guide for Beginners</h3></a>
+                        <div class="article-meta">
+                            <span><i class="far fa-user"></i> RomStreet</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Finance Tools -->
+        <section class="finance-tools">
+            <div class="container">
+                <h2 class="section-title">Free Finance Tools</h2>
+                <div class="tools-grid">
+                    <div class="tool-card">
+                        <div class="tool-icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <h3 class="tool-title">Budget Calculator</h3>
+                        <p>Create a personalized budget based on your income and expenses.</p>
+                    </div>
+
+                    <div class="tool-card">
+                        <div class="tool-icon">
+                            <i class="fas fa-money-check-alt"></i>
+                        </div>
+                        <h3 class="tool-title">Debt Payoff Planner</h3>
+                        <p>Plan your debt-free journey with our optimized payoff strategy.</p>
+                    </div>
+
+                    <div class="tool-card">
+                        <div class="tool-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <h3 class="tool-title">Investment Calculator</h3>
+                        <p>Project your investment growth with compound interest calculations.</p>
+                    </div>
+
+                    <div class="tool-card">
+                        <div class="tool-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h3 class="tool-title">Mortgage Calculator</h3>
+                        <p>Calculate monthly payments and total cost for your home loan.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section class="newsletter">
+            <div class="container">
+                <div class="newsletter-content">
+                    <h2>Get Weekly Finance Tips</h2>
+                    <p>Subscribe to our newsletter and receive actionable financial advice, exclusive content, and free resources directly to your inbox.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email address" required>
+                        <button type="submit" class="cta-button">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>RomStreet</h3>
+                    <p>Your trusted guide to financial freedom. We provide practical advice to help you make smarter money decisions.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://romstreet.net">Home</a></li>
+                        <li><a href="https://romstreet.net/about">About Us</a></li>
+                        <li><a href="https://romstreet.net/privacy">Privacy Policy</a></li>
+                        <li><a href="https://romstreet.net/terms">Terms of Service</a></li>
+                        <li><a href="https://romstreet.net/contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Categories</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://romstreet.net/category/budgeting">Budgeting</a></li>
+                        <li><a href="https://romstreet.net/category/investing">Investing</a></li>
+                        <li><a href="https://romstreet.net/category/debt">Debt Management</a></li>
+                        <li><a href="https://romstreet.net/category/saving">Saving Money</a></li>
+                        <li><a href="https://romstreet.net/category/retirement">Retirement Planning</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://romstreet.net/articles">Articles</a></li>
+                        <li><a href="https://romstreet.net/tools">Free Tools</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>&copy; 2025 RomStreet. All rights reserved. This content is for educational purposes only.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navLinks = document.getElementById('navLinks');
+        
+        mobileToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileToggle.innerHTML = navLinks.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+
+        // Newsletter form submission
+        document.querySelector('.newsletter-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = this.querySelector('input').value;
+            
+            // In a real application, you would send this to a server
+            alert(`Thank you for subscribing with ${email}! You'll receive your first finance tip soon.`);
+            this.reset();
+        });
+
+        // Simple animation for tool cards on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe tool cards for animation
+        document.querySelectorAll('.tool-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
